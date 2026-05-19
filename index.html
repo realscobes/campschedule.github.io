@@ -220,10 +220,22 @@
     }
 
     function fmtHMS(secs) {
-      const h = Math.floor(secs / 3600);
+      if (secs < 3600) {
+        const m = Math.floor(secs / 60);
+        const s = secs % 60;
+        return `${m}:${String(s).padStart(2,'0')}`;
+      }
+      if (secs < 86400) {
+        const h = Math.floor(secs / 3600);
+        const m = Math.floor((secs % 3600) / 60);
+        const s = secs % 60;
+        return `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      }
+      const d = Math.floor(secs / 86400);
+      const h = Math.floor((secs % 86400) / 3600);
       const m = Math.floor((secs % 3600) / 60);
       const s = secs % 60;
-      return `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+      return `${d}:${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
     }
 
     function filmCountdownText(startDate, startTime, endDate, endTime) {
@@ -287,6 +299,32 @@
           el.dataset.endDate,   el.dataset.endTime
         );
       });
+    }
+
+    function openAccordion(row) {
+      row.classList.add('expanded');
+      const detailsRow = row.nextElementSibling;
+      if (!detailsRow) return;
+      const bottomBar  = document.getElementById('bottom-bar');
+      const viewBottom = (bottomBar && !bottomBar.hidden)
+        ? bottomBar.getBoundingClientRect().top - 16
+        : window.innerHeight - 16;
+      const collapse   = detailsRow.querySelector('.film-details-collapse');
+      const inner      = detailsRow.querySelector('.film-details-inner');
+      // Force reflow so scrollHeight is accurate (needed on Safari)
+      void collapse?.offsetHeight;
+      // scrollHeight doesn't include the padding that is transitioning from 0→1rem,
+      // so add 2×1rem (top+bottom) manually
+      const remPx   = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const contentH = collapse ? collapse.scrollHeight + remPx * 2 : 0;
+      const overshoot = row.getBoundingClientRect().bottom + contentH - viewBottom;
+      if (overshoot > 0) {
+        const spacer = document.createElement('div');
+        spacer.style.cssText = `height:${contentH}px;pointer-events:none;`;
+        document.body.appendChild(spacer);
+        window.scrollBy({ top: overshoot, behavior: 'smooth' });
+        setTimeout(() => spacer.remove(), 400);
+      }
     }
 
     function scrollToRow(row, block = 'center') {
@@ -359,7 +397,7 @@
           if (!row) return;
           const isOpen = row.classList.contains('expanded');
           document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
-          if (!isOpen) row.classList.add('expanded');
+          if (!isOpen) openAccordion(row);
         });
         table.addEventListener('keydown', e => {
           if (e.key !== 'Enter' && e.key !== ' ') return;
@@ -368,7 +406,7 @@
           e.preventDefault();
           const isOpen = row.classList.contains('expanded');
           document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
-          if (!isOpen) row.classList.add('expanded');
+          if (!isOpen) openAccordion(row);
         });
         container.appendChild(table);
       });
@@ -419,8 +457,8 @@
           .find(r => r.dataset.title === title);
         if (row) {
           document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
-          row.classList.add('expanded');
           setTimeout(() => scrollToRow(row, 'center'), 50);
+          setTimeout(() => openAccordion(row), 50);
         }
         searchInput.value = '';
         searchDropdown.hidden = true;

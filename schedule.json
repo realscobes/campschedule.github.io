@@ -3,77 +3,77 @@
     "date": "2026-05-18",
     "label": "Mon 18",
     "films": [
-      { "title": "The Shining",               "start": "18:00", "end": "20:24", "location": "Pool"    },
-      { "title": "Halloween",                 "start": "20:34", "end": "22:05", "location": "Pool"    },
-      { "title": "A Nightmare on Elm Street", "start": "22:15", "end": "23:47", "location": "Outside" },
-      { "title": "The Exorcist",              "start": "23:57", "end": "01:59", "location": "Outside" }
+      { "title": "The Shining",               "start": "18:00", "end": "20:24", "location": "Pool",    "imdbId": "tt0081505" },
+      { "title": "Halloween",                 "start": "20:34", "end": "22:05", "location": "Pool",    "imdbId": "tt0077651" },
+      { "title": "A Nightmare on Elm Street", "start": "22:15", "end": "23:47", "location": "Outside", "imdbId": "tt0087800" },
+      { "title": "The Exorcist",              "start": "23:57", "end": "01:59", "location": "Outside", "imdbId": "tt0070047" }
     ]
   },
   {
     "date": "2026-05-19",
     "label": "Tue 19",
     "films": [
-      { "title": "Hereditary",      "start": "02:09", "end": "04:16", "location": "Inside"  },
-      { "title": "Get Out",         "start": "04:26", "end": "06:10", "location": "Inside"  },
-      { "title": "The Conjuring",   "start": "06:20", "end": "08:12", "location": "Inside"  },
-      { "title": "The Ring",        "start": "08:22", "end": "10:17", "location": "Inside"  },
-      { "title": "Suspiria",        "start": "10:27", "end": "12:06", "location": "Inside"  },
-      { "title": "28 Days Later",   "start": "12:16", "end": "14:09", "location": "Inside"  },
-      { "title": "The Witch",       "start": "14:19", "end": "15:51", "location": "Inside"  },
-      { "title": "Alien",           "start": "16:01", "end": "17:58", "location": "Inside"  },
-      { "title": "The Thing",       "start": "18:08", "end": "19:57", "location": "Pool"    },
-      { "title": "Rosemary's Baby", "start": "20:07", "end": "22:24", "location": "Pool"    },
-      { "title": "Psycho",          "start": "22:34", "end": "00:23", "location": "Outside" }
+      { "title": "Hereditary",      "start": "02:09", "end": "04:16", "location": "Inside",  "imdbId": "tt7784604" },
+      { "title": "Get Out",         "start": "04:26", "end": "06:10", "location": "Inside",  "imdbId": "tt5052448" },
+      { "title": "The Conjuring",   "start": "06:20", "end": "08:12", "location": "Inside",  "imdbId": "tt1457767" },
+      { "title": "The Ring",        "start": "08:22", "end": "10:17", "location": "Inside",  "imdbId": "tt0298130" },
+      { "title": "Suspiria",        "start": "10:27", "end": "12:06", "location": "Inside",  "imdbId": "tt0076786" },
+      { "title": "28 Days Later",   "start": "12:16", "end": "14:09", "location": "Inside",  "imdbId": "tt0289043" },
+      { "title": "The Witch",       "start": "14:19", "end": "15:51", "location": "Inside",  "imdbId": "tt4263482" },
+      { "title": "Alien",           "start": "16:01", "end": "17:58", "location": "Inside",  "imdbId": "tt0078748" },
+      { "title": "The Thing",       "start": "18:08", "end": "19:57", "location": "Pool",    "imdbId": "tt0084787" },
+      { "title": "Rosemary's Baby", "start": "20:07", "end": "22:24", "location": "Pool",    "imdbId": "tt0063522" },
+      { "title": "Psycho",          "start": "22:34", "end": "00:23", "location": "Outside", "imdbId": "tt0054215" }
     ]
   },
   {
     "date": "2026-05-20",
     "label": "Wed 20",
     "films": [
-      { "title": "Jaws",                     "start": "00:33", "end": "02:37", "location": "Outside" },
-      { "title": "The Silence of the Lambs", "start": "02:47", "end": "04:45", "location": "Inside"  },
-      { "title": "Scream",                   "start": "04:55", "end": "06:46", "location": "Inside"  },
-      { "title": "Carrie",                   "start": "06:56", "end": "08:34", "location": "Inside"  },
-      { "title": "Poltergeist",              "start": "08:44", "end": "10:38", "location": "Inside"  },
-      { "title": "Night of the Living Dead", "start": "10:48", "end": "12:24", "location": "Inside"  },
-      { "title": "Dawn of the Dead",         "start": "12:34", "end": "14:41", "location": "Inside"  },
-      { "title": "Hellraiser",               "start": "14:51", "end": "16:24", "location": "Inside"  },
-      { "title": "The Omen",                 "start": "16:34", "end": "18:25", "location": "Inside"  },
-      { "title": "Candyman",                 "start": "18:35", "end": "20:14", "location": "Pool"    },
-      { "title": "Doctor Sleep",             "start": "20:24", "end": "22:54", "location": "Pool"    },
-      { "title": "The Babadook",             "start": "23:04", "end": "00:37", "location": "Outside" }
+      { "title": "Jaws",                     "start": "00:33", "end": "02:37", "location": "Outside", "imdbId": "tt0073195" },
+      { "title": "The Silence of the Lambs", "start": "02:47", "end": "04:45", "location": "Inside",  "imdbId": "tt0102926" },
+      { "title": "Scream",                   "start": "04:55", "end": "06:46", "location": "Inside",  "imdbId": "tt0117571" },
+      { "title": "Carrie",                   "start": "06:56", "end": "08:34", "location": "Inside",  "imdbId": "tt0074285" },
+      { "title": "Poltergeist",              "start": "08:44", "end": "10:38", "location": "Inside",  "imdbId": "tt0084516" },
+      { "title": "Night of the Living Dead", "start": "10:48", "end": "12:24", "location": "Inside",  "imdbId": "tt0063350" },
+      { "title": "Dawn of the Dead",         "start": "12:34", "end": "14:41", "location": "Inside",  "imdbId": "tt0077402" },
+      { "title": "Hellraiser",               "start": "14:51", "end": "16:24", "location": "Inside",  "imdbId": "tt0093177" },
+      { "title": "The Omen",                 "start": "16:34", "end": "18:25", "location": "Inside",  "imdbId": "tt0075005" },
+      { "title": "Candyman",                 "start": "18:35", "end": "20:14", "location": "Pool",    "imdbId": "tt0103919" },
+      { "title": "Doctor Sleep",             "start": "20:24", "end": "22:54", "location": "Pool",    "imdbId": "tt5606664" },
+      { "title": "The Babadook",             "start": "23:04", "end": "00:37", "location": "Outside", "imdbId": "tt2321549" }
     ]
   },
   {
     "date": "2026-05-21",
     "label": "Thu 21",
     "films": [
-      { "title": "Insidious",     "start": "00:47", "end": "02:30", "location": "Outside" },
-      { "title": "Sinister",      "start": "02:40", "end": "04:30", "location": "Inside"  },
-      { "title": "The Descent",   "start": "04:40", "end": "06:19", "location": "Inside"  },
-      { "title": "Us",            "start": "06:29", "end": "08:25", "location": "Inside"  },
-      { "title": "Annihilation",  "start": "08:35", "end": "10:30", "location": "Inside"  },
-      { "title": "A Quiet Place", "start": "10:40", "end": "12:10", "location": "Inside"  },
-      { "title": "Terrifier 2",   "start": "12:20", "end": "14:38", "location": "Inside"  },
-      { "title": "Talk to Me",    "start": "14:48", "end": "16:23", "location": "Inside"  },
-      { "title": "Barbarian",     "start": "16:33", "end": "18:15", "location": "Inside"  },
-      { "title": "X",             "start": "18:25", "end": "20:10", "location": "Pool"    },
-      { "title": "Pearl",         "start": "20:20", "end": "22:02", "location": "Pool"    },
-      { "title": "Nope",          "start": "22:12", "end": "00:22", "location": "Outside" }
+      { "title": "Insidious",     "start": "00:47", "end": "02:30", "location": "Outside", "imdbId": "tt1591095" },
+      { "title": "Sinister",      "start": "02:40", "end": "04:30", "location": "Inside",  "imdbId": "tt1922777" },
+      { "title": "The Descent",   "start": "04:40", "end": "06:19", "location": "Inside",  "imdbId": "tt0435625" },
+      { "title": "Us",            "start": "06:29", "end": "08:25", "location": "Inside",  "imdbId": "tt6857112" },
+      { "title": "Annihilation",  "start": "08:35", "end": "10:30", "location": "Inside",  "imdbId": "tt2798920" },
+      { "title": "A Quiet Place", "start": "10:40", "end": "12:10", "location": "Inside",  "imdbId": "tt6644200" },
+      { "title": "Terrifier 2",   "start": "12:20", "end": "14:38", "location": "Inside",  "imdbId": "tt13831504" },
+      { "title": "Talk to Me",    "start": "14:48", "end": "16:23", "location": "Inside",  "imdbId": "tt10638522" },
+      { "title": "Barbarian",     "start": "16:33", "end": "18:15", "location": "Inside",  "imdbId": "tt15791034" },
+      { "title": "X",             "start": "18:25", "end": "20:10", "location": "Pool",    "imdbId": "tt13560574" },
+      { "title": "Pearl",         "start": "20:20", "end": "22:02", "location": "Pool",    "imdbId": "tt18925334" },
+      { "title": "Nope",          "start": "22:12", "end": "00:22", "location": "Outside", "imdbId": "tt10954984" }
     ]
   },
   {
     "date": "2026-05-22",
     "label": "Fri 22",
     "films": [
-      { "title": "M3GAN",             "start": "00:32", "end": "02:14", "location": "Outside" },
-      { "title": "Midsommar",         "start": "02:24", "end": "04:52", "location": "Inside"  },
-      { "title": "It",                "start": "05:02", "end": "07:17", "location": "Inside"  },
-      { "title": "Mandy",             "start": "07:27", "end": "09:28", "location": "Inside"  },
-      { "title": "The Invisible Man", "start": "09:38", "end": "11:42", "location": "Inside"  },
-      { "title": "Black Swan",        "start": "11:52", "end": "13:40", "location": "Inside"  },
-      { "title": "Misery",            "start": "13:50", "end": "15:37", "location": "Inside"  },
-      { "title": "30 Days of Night",  "start": "15:47", "end": "17:40", "location": "Inside"  }
+      { "title": "M3GAN",             "start": "00:32", "end": "02:14", "location": "Outside", "imdbId": "tt8760708" },
+      { "title": "Midsommar",         "start": "02:24", "end": "04:52", "location": "Inside",  "imdbId": "tt8772262" },
+      { "title": "It",                "start": "05:02", "end": "07:17", "location": "Inside",  "imdbId": "tt1396484" },
+      { "title": "Mandy",             "start": "07:27", "end": "09:28", "location": "Inside",  "imdbId": "tt6998518" },
+      { "title": "The Invisible Man", "start": "09:38", "end": "11:42", "location": "Inside",  "imdbId": "tt1462400" },
+      { "title": "Black Swan",        "start": "11:52", "end": "13:40", "location": "Inside",  "imdbId": "tt0947798" },
+      { "title": "Misery",            "start": "13:50", "end": "15:37", "location": "Inside",  "imdbId": "tt0100157" },
+      { "title": "30 Days of Night",  "start": "15:47", "end": "17:40", "location": "Inside",  "imdbId": "tt0389722" }
     ]
   }
 ]

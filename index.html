@@ -4,12 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Summer Camp 2026</title>
-  <link rel="stylesheet" href="schedule.css" />
+  <link rel="stylesheet" href="schedule.css?v=3" />
 </head>
 <body>
 
   <div class="sticky-header">
-    <h1>Summer Camp 2026</h1>
+    <div class="header-top">
+      <h1>Summer Camp 2026</h1>
+      <label class="search-box" aria-label="Search films">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="2"/>
+          <line x1="12.5" y1="12.5" x2="17" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <input class="search-input" type="search" placeholder="" aria-label="Search films">
+      </label>
+    </div>
     <div class="tabs-bar" role="tablist" id="tabs-bar"></div>
   </div>
 
@@ -25,6 +34,7 @@
 
   <script>
     let SCHEDULE = [];
+    let DETAILS   = {};
 
     function parseMins(hhmm) {
       const [h, m] = hhmm.split(':').map(Number);
@@ -92,7 +102,7 @@
       let playingDay = null;
 
       SCHEDULE.forEach((day, i) => {
-        document.querySelectorAll(`#day-${i} tbody tr`).forEach(row => {
+        document.querySelectorAll(`#day-${i} tbody tr.film-row`).forEach(row => {
           const startMins = parseMins(row.dataset.start);
           const endMins   = parseMins(row.dataset.end);
           let playing = false;
@@ -154,7 +164,7 @@
               (day.date === todayStr && startMins > nowMins);
             if (isUpcoming) {
               found = true;
-              const row = document.querySelector(`#day-${i} tbody tr:nth-child(${j + 1})`);
+              const row = document.querySelectorAll(`#day-${i} tbody tr.film-row`)[j];
               if (row) {
                 const badge = document.createElement('span');
                 badge.className = 'up-next-badge';
@@ -242,15 +252,47 @@
         table.className = 'day-table' + (i === activeIdx ? ' active' : '');
         table.setAttribute('role', 'tabpanel');
         table.innerHTML = `
-          <thead><tr><th>Title</th><th>Start</th><th>End</th><th>Location</th></tr></thead>
-          <tbody>${day.films.map(f => `
-            <tr data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
+          <thead><tr><th>Title</th><th>Start</th><th>End</th><th>Location</th><th></th></tr></thead>
+          <tbody>${day.films.map(f => {
+            const d = DETAILS[f.title] || {};
+            const posterHtml = d.poster
+              ? `<img class="film-poster" src="images/${d.poster}" alt="${f.title} poster" loading="lazy">`
+              : '';
+            const metaHtml = [
+              d.director ? `<p class="film-meta"><span class="film-meta-label">Director</span> ${d.director}</p>` : '',
+              d.stars?.length ? `<p class="film-meta"><span class="film-meta-label">Stars</span> ${d.stars.join(' \u00b7 ')}</p>` : '',
+              d.tagline  ? `<p class="film-tagline">&ldquo;${d.tagline}&rdquo;</p>` : '',
+              d.summary  ? `<p class="film-summary">${d.summary}</p>` : '',
+            ].join('');
+            return `
+            <tr class="film-row" tabindex="0" data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
               <td>${f.title}</td>
               <td data-label="Start"><span class="time time-single">${fmt12(f.start)}</span><span class="time-range"><span class="time">${fmt12(f.start)}</span> – <span class="time">${fmt12(f.end)}</span></span></td>
               <td data-label="End"><span class="time">${fmt12(f.end)}</span></td>
               <td data-label="Location"><span class="loc loc-${f.location.toLowerCase()}">${f.location}</span></td>
-            </tr>`).join('')}
+              <td class="toggle-cell"><span class="toggle-chevron"></span></td>
+            </tr>
+            <tr class="film-details-row">
+              <td colspan="5"><div class="film-details-collapse"><div class="film-details-inner">${posterHtml}<div class="film-details-text">${metaHtml}</div></div></div></td>
+            </tr>`;
+          }).join('')}
           </tbody>`;
+        table.addEventListener('click', e => {
+          const row = e.target.closest('tr.film-row');
+          if (!row) return;
+          const isOpen = row.classList.contains('expanded');
+          document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
+          if (!isOpen) row.classList.add('expanded');
+        });
+        table.addEventListener('keydown', e => {
+          if (e.key !== 'Enter' && e.key !== ' ') return;
+          const row = e.target.closest('tr.film-row');
+          if (!row) return;
+          e.preventDefault();
+          const isOpen = row.classList.contains('expanded');
+          document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
+          if (!isOpen) row.classList.add('expanded');
+        });
         container.appendChild(table);
       });
     }
@@ -259,28 +301,30 @@
       const hdr = document.querySelector('.sticky-header');
       document.body.style.paddingTop = hdr.offsetHeight + 'px';
     }
-    fetch('schedule.json')
-      .then(r => r.json())
-      .then(data => {
-        SCHEDULE = data;
-        buildTables();
-        fitHeaderPadding();
-        window.addEventListener('resize', fitHeaderPadding);
-        highlight();
-        scrollToActive();
-        setInterval(() => {
-          fetch('schedule.json')
-            .then(r => r.json())
-            .then(data => {
-              if (JSON.stringify(data) !== JSON.stringify(SCHEDULE)) {
-                SCHEDULE = data;
-                buildTables();
-              }
-              highlight();
-            });
-        }, 60_000);
-        setInterval(updateCountdown, 1_000);
-      });
+    Promise.all([
+      fetch('schedule.json').then(r => r.json()),
+      fetch('details.json').then(r => r.json()).catch(() => ({}))
+    ]).then(([scheduleData, detailsData]) => {
+      SCHEDULE = scheduleData;
+      DETAILS  = detailsData;
+      buildTables();
+      fitHeaderPadding();
+      window.addEventListener('resize', fitHeaderPadding);
+      highlight();
+      scrollToActive();
+      setInterval(() => {
+        fetch('schedule.json')
+          .then(r => r.json())
+          .then(data => {
+            if (JSON.stringify(data) !== JSON.stringify(SCHEDULE)) {
+              SCHEDULE = data;
+              buildTables();
+            }
+            highlight();
+          });
+      }, 60_000);
+      setInterval(updateCountdown, 1_000);
+    });
   </script>
 </body>
 </html>

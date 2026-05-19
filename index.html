@@ -263,6 +263,12 @@
         };
         const pa = priority(a), pb = priority(b);
         if (pa !== pb) return pa - pb;
+        if (pa === 1) {
+          // upcoming: sort by start date+time ascending
+          const ta = new Date(`${a.day.date}T${a.film.start}:00`);
+          const tb = new Date(`${b.day.date}T${b.film.start}:00`);
+          if (ta - tb !== 0) return ta - tb;
+        }
         return a.film.title.localeCompare(b.film.title);
       });
       if (!results.length) {

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Summer Camp 2026 Film Schedule</title>
+  <link rel="stylesheet" href="schedule.css" />
+</head>
+<body>
+
+  <h1>Summer Camp 2026 Film Schedule</h1>
+  <div class="sticky-header">
+    <div class="tabs-bar" role="tablist" id="tabs-bar"></div>
+  </div>
+
+  <div class="table-wrapper">
+    <div id="tables-container"></div>
+  </div>
+
+  <div class="bottom-bar" id="bottom-bar" hidden>
+    <span class="bottom-bar-label" id="bottom-bar-label">Up Next</span>
+    <span class="bottom-bar-title" id="bottom-bar-title"></span>
+    <span class="bottom-bar-countdown" id="bottom-bar-countdown"></span>
+  </div>
+
+  <script>
+    const SCHEDULE = [
+      {
+        "date": "2026-05-18",
+        "label": "Mon 18",
+        "films": [
+          { "title": "Rashomon",           "start": "18:00", "end": "19:28", "location": "Inside"  },
+          { "title": "The Grand Illusion", "start": "19:38", "end": "21:32", "location": "Outside" },
+          { "title": "Stalker",            "start": "21:42", "end": "00:25", "location": "Pool"    }
+        ]
+      },
+      {
+        "date": "2026-05-19",
+        "label": "Tue 19",
+        "films": [
+          { "title": "Metropolis",            "start": "00:35", "end": "03:08", "location": "Inside"  },
+          { "title": "Spirited Away",         "start": "03:18", "end": "05:23", "location": "Pool"    },
+          { "title": "2001: A Space Odyssey", "start": "05:33", "end": "08:02", "location": "Outside" },
+          { "title": "Dune: Part Two",        "start": "08:12", "end": "10:58", "location": "Inside"  },
+          { "title": "Blade Runner 2049",     "start": "11:08", "end": "13:52", "location": "Pool"    },
+          { "title": "Parasite",              "start": "14:02", "end": "16:14", "location": "Outside" },
+          { "title": "Mad Max: Fury Road",    "start": "16:24", "end": "18:24", "location": "Inside"  },
+          { "title": "The Shining",           "start": "18:34", "end": "21:00", "location": "Pool"    },
+          { "title": "The Thing",             "start": "21:10", "end": "22:59", "location": "Outside" },
+          { "title": "Akira",                 "start": "23:09", "end": "01:13", "location": "Inside"  }
+        ]
+      },
+      {
+        "date": "2026-05-20",
+        "label": "Wed 20",
+        "films": [
+          { "title": "Seven Samurai",         "start": "01:23", "end": "04:50", "location": "Pool"    },
+          { "title": "Princess Mononoke",     "start": "05:00", "end": "07:14", "location": "Outside" },
+          { "title": "Alien",                 "start": "07:24", "end": "09:21", "location": "Inside"  },
+          { "title": "Rashomon",              "start": "09:31", "end": "10:59", "location": "Pool"    },
+          { "title": "The Grand Illusion",    "start": "11:09", "end": "13:03", "location": "Outside" },
+          { "title": "Stalker",               "start": "13:13", "end": "15:56", "location": "Inside"  },
+          { "title": "Metropolis",            "start": "16:06", "end": "18:39", "location": "Pool"    },
+          { "title": "Spirited Away",         "start": "18:49", "end": "20:54", "location": "Outside" },
+          { "title": "2001: A Space Odyssey", "start": "21:04", "end": "23:33", "location": "Inside"  },
+          { "title": "Dune: Part Two",        "start": "23:43", "end": "02:29", "location": "Pool"    }
+        ]
+      },
+      {
+        "date": "2026-05-21",
+        "label": "Thu 21",
+        "films": [
+          { "title": "Blade Runner 2049",  "start": "02:39", "end": "05:23", "location": "Outside" },
+          { "title": "Parasite",           "start": "05:33", "end": "07:45", "location": "Inside"  },
+          { "title": "Mad Max: Fury Road", "start": "07:55", "end": "09:55", "location": "Pool"    },
+          { "title": "The Shining",        "start": "10:05", "end": "12:31", "location": "Outside" },
+          { "title": "The Thing",          "start": "12:41", "end": "14:30", "location": "Inside"  },
+          { "title": "Akira",              "start": "14:40", "end": "16:44", "location": "Pool"    },
+          { "title": "Seven Samurai",      "start": "16:54", "end": "20:21", "location": "Outside" },
+          { "title": "Princess Mononoke",  "start": "20:31", "end": "22:45", "location": "Inside"  },
+          { "title": "Alien",              "start": "22:55", "end": "00:52", "location": "Pool"    }
+        ]
+      },
+      {
+        "date": "2026-05-22",
+        "label": "Fri 22",
+        "films": [
+          { "title": "Rashomon",           "start": "01:02", "end": "02:30", "location": "Outside" },
+          { "title": "The Grand Illusion", "start": "02:40", "end": "04:34", "location": "Inside"  },
+          { "title": "Stalker",            "start": "04:44", "end": "07:27", "location": "Pool"    },
+          { "title": "Metropolis",         "start": "07:37", "end": "10:10", "location": "Outside" },
+          { "title": "Spirited Away",      "start": "10:20", "end": "12:25", "location": "Inside"  },
+          { "title": "Mad Max: Fury Road", "start": "12:35", "end": "14:35", "location": "Pool"    }
+        ]
+      }
+    ];
+
+    function parseMins(hhmm) {
+      const [h, m] = hhmm.split(':').map(Number);
+      return h * 60 + m;
+    }
+
+    function localDateStr(d) {
+      return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+    }
+
+    function fmt12(hhmm) {
+      let [h, m] = hhmm.split(':').map(Number);
+      const ampm = h < 12 ? 'AM' : 'PM';
+      if (h === 0) h = 12;
+      else if (h > 12) h -= 12;
+      return `${h}:${String(m).padStart(2, '0')} ${ampm}`;
+    }
+
+    function isNowPlaying(startMins, endMins, nowMins) {
+      if (endMins > startMins) return nowMins >= startMins && nowMins < endMins;
+      return nowMins >= startMins; // crosses midnight: only true once film has started
+    }
+
+    function switchTab(idx) {
+      document.querySelectorAll('.tab-btn').forEach((btn, i) => {
+        btn.classList.toggle('active', i === idx);
+        btn.setAttribute('aria-selected', String(i === idx));
+      });
+      document.querySelectorAll('.day-table').forEach((tbl, i) => {
+        tbl.classList.toggle('active', i === idx);
+      });
+
+      // Scroll to active row if this is its day, otherwise first row of the day
+      const activeRow = document.querySelector('tr.now-playing')
+        || document.querySelector('.up-next-badge')?.closest('tr');
+      const tables = [...document.querySelectorAll('.day-table')];
+      const activeIdx = activeRow ? tables.indexOf(activeRow.closest('.day-table')) : -1;
+      if (activeIdx === idx && activeRow) {
+        scrollToRow(activeRow, 'start');
+      } else {
+        const firstRow = document.querySelector(`#day-${idx} tbody tr`);
+        if (firstRow) scrollToRow(firstRow, 'start');
+      }
+    }
+
+    function highlight() {
+      const now          = new Date();
+      const todayStr     = localDateStr(now);
+      const yd           = new Date(now);
+      yd.setDate(yd.getDate() - 1);
+      const yesterdayStr = localDateStr(yd);
+      const tm           = new Date(now);
+      tm.setDate(tm.getDate() + 1);
+      const tomorrowStr  = localDateStr(tm);
+      const nowMins      = now.getHours() * 60 + now.getMinutes();
+
+      let anyPlaying = false;
+      let playingRow = null;
+      let playingDay = null;
+
+      SCHEDULE.forEach((day, i) => {
+        document.querySelectorAll(`#day-${i} tbody tr`).forEach(row => {
+          const startMins = parseMins(row.dataset.start);
+          const endMins   = parseMins(row.dataset.end);
+          let playing = false;
+          if (day.date === todayStr) {
+            playing = isNowPlaying(startMins, endMins, nowMins);
+          } else if (day.date === yesterdayStr && endMins < startMins) {
+            // Overnight film from yesterday still running into today's early hours
+            playing = nowMins < endMins;
+          }
+          if (playing) { anyPlaying = true; playingRow = row; playingDay = day; }
+
+          row.classList.toggle('now-playing', playing);
+
+          const titleCell = row.cells[0];
+          const existing  = titleCell.querySelector('.now-playing-badge');
+          if (playing && !existing) {
+            const badge = document.createElement('span');
+            badge.className = 'now-playing-badge';
+            badge.textContent = 'Now playing';
+            titleCell.appendChild(badge);
+          } else if (!playing && existing) {
+            existing.remove();
+          }
+          // Clear any stale up-next badge each pass
+          titleCell.querySelector('.up-next-badge')?.remove();
+        });
+      });
+
+      // Update bottom bar
+      if (anyPlaying && playingRow) {
+        const startMins = parseMins(playingRow.dataset.start);
+        const endMins   = parseMins(playingRow.dataset.end);
+        let endDateStr;
+        if (playingDay.date === yesterdayStr) {
+          endDateStr = todayStr;    // overnight film ends today
+        } else if (endMins < startMins) {
+          endDateStr = tomorrowStr; // today's film crosses midnight
+        } else {
+          endDateStr = playingDay.date;
+        }
+        const bar = document.getElementById('bottom-bar');
+        document.getElementById('bottom-bar-label').textContent = 'Now Playing';
+        document.getElementById('bottom-bar-title').textContent = playingRow.dataset.title;
+        bar.dataset.targetMins = endMins;
+        bar.dataset.targetDate = endDateStr;
+        bar.removeAttribute('hidden');
+        document.body.classList.add('has-bottom-bar');
+        updateCountdown();
+      }
+      if (!anyPlaying) {
+        let found = false;
+        SCHEDULE.forEach((day, i) => {
+          if (found) return;
+          day.films.forEach((f, j) => {
+            if (found) return;
+            const startMins  = parseMins(f.start);
+            const isUpcoming =
+              day.date > todayStr ||
+              (day.date === todayStr && startMins > nowMins);
+            if (isUpcoming) {
+              found = true;
+              const row = document.querySelector(`#day-${i} tbody tr:nth-child(${j + 1})`);
+              if (row) {
+                const badge = document.createElement('span');
+                badge.className = 'up-next-badge';
+                badge.textContent = 'Up Next';
+                row.cells[0].appendChild(badge);
+                const bar = document.getElementById('bottom-bar');
+                document.getElementById('bottom-bar-label').textContent = 'Up Next';
+                document.getElementById('bottom-bar-title').textContent = f.title;
+                bar.dataset.targetMins = parseMins(f.start);
+                bar.dataset.targetDate = day.date;
+                bar.removeAttribute('hidden');
+                document.body.classList.add('has-bottom-bar');
+                updateCountdown();
+              }
+            }
+          });
+        });
+        if (!found) {
+          document.getElementById('bottom-bar').setAttribute('hidden', '');
+          document.body.classList.remove('has-bottom-bar');
+        }
+      }
+    }
+
+    function updateCountdown() {
+      const bar = document.getElementById('bottom-bar');
+      if (bar.hidden) return;
+      const targetMins = +bar.dataset.targetMins;
+      const targetDate = bar.dataset.targetDate;
+      const now        = new Date();
+      const nowSecs    = now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds();
+      const todayStr   = localDateStr(now);
+      let deltaSecs;
+      if (targetDate === todayStr) {
+        deltaSecs = targetMins * 60 - nowSecs;
+      } else {
+        deltaSecs = (24 * 60 - (nowSecs / 60)) * 60 + targetMins * 60;
+      }
+      if (deltaSecs <= 0) {
+        highlight();
+        return;
+      }
+      const m = Math.floor(deltaSecs / 60);
+      const s = deltaSecs % 60;
+      document.getElementById('bottom-bar-countdown').textContent = `${m}:${String(s).padStart(2, '0')}`;
+    }
+
+    function scrollToRow(row, block = 'center') {
+      const headerH = document.querySelector('.sticky-header')?.offsetHeight ?? 0;
+      const rect    = row.getBoundingClientRect();
+      if (block === 'start') {
+        window.scrollBy({ top: rect.top - headerH - 16, behavior: 'smooth' });
+      } else {
+        const visibleH = window.innerHeight - headerH;
+        window.scrollBy({ top: rect.top - headerH - visibleH / 2 + rect.height / 2, behavior: 'smooth' });
+      }
+    }
+
+    function scrollToActive() {
+      const row = document.querySelector('tr.now-playing')
+        || document.querySelector('.up-next-badge')?.closest('tr');
+      if (row) scrollToRow(row, 'center');
+    }
+
+    function buildTables() {
+      const tabsBar   = document.getElementById('tabs-bar');
+      const container = document.getElementById('tables-container');
+      const todayStr  = localDateStr(new Date());
+      let activeIdx   = SCHEDULE.findIndex(d => d.date === todayStr);
+      if (activeIdx === -1) activeIdx = 0;
+
+      SCHEDULE.forEach((day, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (i === activeIdx ? ' active' : '');
+        btn.textContent = day.label.split(' ')[0];
+        btn.setAttribute('role', 'tab');
+        btn.setAttribute('aria-selected', String(i === activeIdx));
+        btn.addEventListener('click', () => switchTab(i));
+        tabsBar.appendChild(btn);
+
+        const table = document.createElement('table');
+        table.id = `day-${i}`;
+        table.className = 'day-table' + (i === activeIdx ? ' active' : '');
+        table.setAttribute('role', 'tabpanel');
+        table.innerHTML = `
+          <thead><tr><th>Title</th><th>Start</th><th>End</th><th>Location</th></tr></thead>
+          <tbody>${day.films.map(f => `
+            <tr data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
+              <td>${f.title}</td>
+              <td data-label="Start"><span class="time">${fmt12(f.start)}</span></td>
+              <td data-label="End"><span class="time">${fmt12(f.end)}</span></td>
+              <td data-label="Location"><span class="loc loc-${f.location.toLowerCase()}">${f.location}</span></td>
+            </tr>`).join('')}
+          </tbody>`;
+        container.appendChild(table);
+      });
+    }
+
+    buildTables();
+    highlight();
+    scrollToActive();
+    setInterval(highlight, 60_000);
+    setInterval(updateCountdown, 1_000);
+  </script>
+</body>
+</html>

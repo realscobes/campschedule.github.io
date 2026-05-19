@@ -11,13 +11,16 @@
   <div class="sticky-header">
     <div class="header-top">
       <h1>Summer Camp 2026</h1>
-      <label class="search-box" aria-label="Search films">
-        <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="2"/>
-          <line x1="12.5" y1="12.5" x2="17" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        <input class="search-input" type="search" placeholder="" aria-label="Search films">
-      </label>
+      <div class="search-wrap">
+        <label class="search-box" aria-label="Search films">
+          <svg class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.5" y1="12.5" x2="17" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <input class="search-input" type="search" placeholder="" aria-label="Search films">
+        </label>
+        <div id="search-dropdown" class="search-dropdown" hidden></div>
+      </div>
     </div>
     <div class="tabs-bar" role="tablist" id="tabs-bar"></div>
   </div>
@@ -212,6 +215,80 @@
       document.getElementById('bottom-bar-countdown').textContent = `${m}:${String(s).padStart(2, '0')}`;
     }
 
+    function secsUntil(dateStr, timeStr) {
+      return Math.floor((new Date(`${dateStr}T${timeStr}:00`) - Date.now()) / 1000);
+    }
+
+    function fmtHMS(secs) {
+      const h = Math.floor(secs / 3600);
+      const m = Math.floor((secs % 3600) / 60);
+      const s = secs % 60;
+      return `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    }
+
+    function filmCountdownText(startDate, startTime, endDate, endTime) {
+      if (secsUntil(endDate, endTime) < 0)     return 'finished';
+      if (secsUntil(startDate, startTime) <= 0) return 'now playing';
+      return fmtHMS(secsUntil(startDate, startTime));
+    }
+
+    function renderSearchDropdown(query) {
+      const dropdown = document.getElementById('search-dropdown');
+      if (!query) { dropdown.hidden = true; return; }
+      const q = query.toLowerCase();
+      const results = [];
+      SCHEDULE.forEach((day, dayIdx) => {
+        day.films.forEach(film => {
+          if (film.title.toLowerCase().includes(q)) results.push({ day, dayIdx, film });
+        });
+      });
+      results.sort((a, b) => {
+        const priority = ({ day, film }) => {
+          const endDate = parseMins(film.end) < parseMins(film.start)
+            ? localDateStr(new Date(new Date(day.date).getTime() + 86400000))
+            : day.date;
+          if (secsUntil(endDate, film.end) < 0)      return 2; // finished
+          if (secsUntil(day.date, film.start) <= 0)  return 0; // now playing
+          return 1; // upcoming
+        };
+        const pa = priority(a), pb = priority(b);
+        if (pa !== pb) return pa - pb;
+        return a.film.title.localeCompare(b.film.title);
+      });
+      if (!results.length) {
+        dropdown.innerHTML = '<div class="search-no-results">No films found</div>';
+        dropdown.hidden = false;
+        return;
+      }
+      dropdown.innerHTML = results.map(({ day, dayIdx, film }) => {
+        const d = DETAILS[film.title] || {};
+        const posterHtml = d.poster
+          ? `<img class="search-result-poster" src="images/${d.poster}" alt="" loading="lazy">`
+          : `<div class="search-result-poster search-result-no-poster"></div>`;
+        const endDate = parseMins(film.end) < parseMins(film.start)
+          ? localDateStr(new Date(new Date(day.date).getTime() + 86400000))
+          : day.date;
+        const cdText = filmCountdownText(day.date, film.start, endDate, film.end);
+        return `<div class="search-result" data-day-idx="${dayIdx}" data-title="${film.title.replace(/"/g,'&quot;')}">
+          ${posterHtml}
+          <div class="search-result-info">
+            <div class="search-result-title">${film.title}</div>
+            <div class="search-result-meta">${day.label} · ${fmt12(film.start)} · <span class="search-countdown" data-start-date="${day.date}" data-start-time="${film.start}" data-end-date="${endDate}" data-end-time="${film.end}">${cdText}</span></div>
+          </div>
+        </div>`;
+      }).join('');
+      dropdown.hidden = false;
+    }
+
+    function updateSearchCountdowns() {
+      document.querySelectorAll('.search-countdown').forEach(el => {
+        el.textContent = filmCountdownText(
+          el.dataset.startDate, el.dataset.startTime,
+          el.dataset.endDate,   el.dataset.endTime
+        );
+      });
+    }
+
     function scrollToRow(row, block = 'center') {
       const headerH = document.querySelector('.sticky-header')?.offsetHeight ?? 0;
       const rect    = row.getBoundingClientRect();
@@ -259,8 +336,8 @@
               ? `<img class="film-poster" src="images/${d.poster}" alt="${f.title} poster" loading="lazy">`
               : '';
             const metaHtml = [
-              d.director ? `<p class="film-meta"><span class="film-meta-label">Director</span> ${d.director}</p>` : '',
-              d.stars?.length ? `<p class="film-meta"><span class="film-meta-label">Stars</span> ${d.stars.join(' \u00b7 ')}</p>` : '',
+              d.director ? `<p class="film-meta"><span class="film-meta-label">Director</span> <span class="film-meta-value">${d.director}</span></p>` : '',
+              d.stars?.length ? `<p class="film-meta"><span class="film-meta-label">Starring</span> <span class="film-meta-value">${d.stars.join(' \u00b7 ')}</span></p>` : '',
               d.tagline  ? `<p class="film-tagline">&ldquo;${d.tagline}&rdquo;</p>` : '',
               d.summary  ? `<p class="film-summary">${d.summary}</p>` : '',
             ].join('');
@@ -323,7 +400,32 @@
             highlight();
           });
       }, 60_000);
-      setInterval(updateCountdown, 1_000);
+      setInterval(() => { updateCountdown(); updateSearchCountdowns(); }, 1_000);
+
+      // Search
+      const searchInput    = document.querySelector('.search-input');
+      const searchDropdown = document.getElementById('search-dropdown');
+      searchInput.addEventListener('input', () => renderSearchDropdown(searchInput.value.trim()));
+      searchInput.addEventListener('focus', () => { if (searchInput.value.trim()) renderSearchDropdown(searchInput.value.trim()); });
+      searchInput.addEventListener('blur',  () => setTimeout(() => { searchDropdown.hidden = true; }, 200));
+      searchDropdown.addEventListener('mousedown', e => {
+        e.preventDefault(); // keep focus in input
+        const result = e.target.closest('.search-result');
+        if (!result) return;
+        const dayIdx = +result.dataset.dayIdx;
+        const title  = result.dataset.title;
+        switchTab(dayIdx);
+        const row = [...document.querySelectorAll(`#day-${dayIdx} tbody tr.film-row`)]
+          .find(r => r.dataset.title === title);
+        if (row) {
+          document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
+          row.classList.add('expanded');
+          setTimeout(() => scrollToRow(row, 'center'), 50);
+        }
+        searchInput.value = '';
+        searchDropdown.hidden = true;
+        searchInput.blur();
+      });
     });
   </script>
 </body>

@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: pctkc-e3etl
-created: 2026-05-18T15:15:38+02:00

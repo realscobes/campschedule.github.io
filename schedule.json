@@ -1,7 +1,7 @@
 [
   {
-    "date": "2026-05-18",
-    "label": "Mon 18",
+    "date": "2026-06-05",
+    "label": "Fri 5",
     "films": [
       { "title": "The Shining",               "start": "18:00", "end": "20:24", "location": "Pool",    "imdbId": "tt0081505" },
       { "title": "Halloween",                 "start": "20:34", "end": "22:05", "location": "Pool",    "imdbId": "tt0077651" },
@@ -10,8 +10,8 @@
     ]
   },
   {
-    "date": "2026-05-19",
-    "label": "Tue 19",
+    "date": "2026-06-06",
+    "label": "Sat 6",
     "films": [
       { "title": "Hereditary",      "start": "02:09", "end": "04:16", "location": "Inside",  "imdbId": "tt7784604" },
       { "title": "Get Out",         "start": "04:26", "end": "06:10", "location": "Inside",  "imdbId": "tt5052448" },
@@ -27,8 +27,8 @@
     ]
   },
   {
-    "date": "2026-05-20",
-    "label": "Wed 20",
+    "date": "2026-06-07",
+    "label": "Sun 7",
     "films": [
       { "title": "Jaws",                     "start": "00:33", "end": "02:37", "location": "Outside", "imdbId": "tt0073195" },
       { "title": "The Silence of the Lambs", "start": "02:47", "end": "04:45", "location": "Inside",  "imdbId": "tt0102926" },
@@ -45,8 +45,8 @@
     ]
   },
   {
-    "date": "2026-05-21",
-    "label": "Thu 21",
+    "date": "2026-06-08",
+    "label": "Mon 8",
     "films": [
       { "title": "Insidious",     "start": "00:47", "end": "02:30", "location": "Outside", "imdbId": "tt1591095" },
       { "title": "Sinister",      "start": "02:40", "end": "04:30", "location": "Inside",  "imdbId": "tt1922777" },
@@ -63,8 +63,8 @@
     ]
   },
   {
-    "date": "2026-05-22",
-    "label": "Fri 22",
+    "date": "2026-06-09",
+    "label": "Tue 9",
     "films": [
       { "title": "M3GAN",             "start": "00:32", "end": "02:14", "location": "Outside", "imdbId": "tt8760708" },
       { "title": "Midsommar",         "start": "02:24", "end": "04:52", "location": "Inside",  "imdbId": "tt8772262" },

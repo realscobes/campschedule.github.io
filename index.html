@@ -148,7 +148,7 @@
         }
         const bar = document.getElementById('bottom-bar');
         document.getElementById('bottom-bar-label').textContent = 'Now Playing';
-        document.getElementById('bottom-bar-title').textContent = playingRow.dataset.title;
+        document.getElementById('bottom-bar-title').textContent = DETAILS[playingRow.dataset.title]?.title || playingRow.dataset.title;
         bar.dataset.targetMins = endMins;
         bar.dataset.targetDate = endDateStr;
         bar.removeAttribute('hidden');

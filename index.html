@@ -230,8 +230,9 @@
       if (targetDate === todayStr) {
         deltaSecs = targetMins * 60 - nowSecs;
       } else {
-        deltaSecs = (24 * 60 - (nowSecs / 60)) * 60 + targetMins * 60;
+        deltaSecs = (86400 - nowSecs) + targetMins * 60;
       }
+      deltaSecs = Math.floor(deltaSecs);
       if (deltaSecs <= 0) {
         highlight();
         return;

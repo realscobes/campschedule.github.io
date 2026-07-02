@@ -134,7 +134,7 @@ def download_poster(poster_path, tmdb_id):
 WHITELIST_RE = re.compile(r"^'(.+)'\s*=\s*'(.+)'")
 
 
-def load_whitelist(path="WHITELIST.CFG"):
+def load_whitelist(path="WHITELST.CFG"):
     """Parse whitelist file of 'filename' = 'display name' entries."""
     entries = {}
     if not os.path.exists(path):

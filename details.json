@@ -77,6 +77,10 @@
     "summary": "The \"true\" story of what really became of Elvis Presley. We find Elvis as an elderly resident in an East Texas rest home, who switched identities with an Elvis impersonator years before his \"death,\" then missed his chance to switch back. He must team up with JFK and fight an ancient Egyptian mummy for the souls of their fellow residents.",
     "poster": "9707.jpg"
   },
+  "Compartments": {
+    "title": "Compartments",
+    "movie": false
+  },
   "Dead Ringers (1988)": {
     "title": "Dead Ringers",
     "year": "1988",
@@ -298,6 +302,10 @@
     "summary": "Real zombies arrive and terrorize the crew of a zombie film being shot in an abandoned warehouse, said to be the site of military experiments on humans.",
     "poster": "513434.jpg"
   },
+  "Outdoor intermission-01": {
+    "title": "Outdoor Introduction/Sound Check",
+    "movie": false
+  },
   "Parasite (2019)": {
     "title": "Parasite",
     "year": "2019",
@@ -388,6 +396,10 @@
     "tagline": "A romantic comedy. With zombies.",
     "summary": "Shaun lives a supremely uneventful life, which revolves around his girlfriend, his mother, and, above all, his local pub. This gentle routine is threatened when the dead return to life and make strenuous attempts to snack on ordinary Londoners.",
     "poster": "747.jpg"
+  },
+  "Special_presentation_film_camp_2026_kickoff": {
+    "title": "A Very Special Presentation",
+    "movie": false
   },
   "Starship Troopers (1997)": {
     "title": "Starship Troopers",
@@ -584,6 +596,10 @@
     "summary": "In 1630, a farmer relocates his family to a remote plot of land on the edge of a forest where strange, unsettling things happen. With suspicion and paranoia mounting, each family member's faith, loyalty and love are tested in shocking ways.",
     "poster": "310131.jpg"
   },
+  "The was-Soda Jerk vs The Avalanches": {
+    "title": "The Was vs. The Avalanches - Soda Jerk",
+    "movie": false
+  },
   "Thoroughbreds (2017)": {
     "title": "Thoroughbreds",
     "year": "2017",
@@ -596,6 +612,10 @@
     "tagline": "Good breeding gone bad",
     "summary": "Lily and Amanda, two high school students living in suburban Connecticut, rekindle their unlikely friendship after years of drifting apart. Together, they devise a plan to kill Lily's abusive stepfather by hiring a lowlife drug dealer.",
     "poster": "397722.jpg"
+  },
+  "Trivia_45m": {
+    "title": "Trivia!",
+    "movie": false
   },
   "X (2022)": {
     "title": "X",

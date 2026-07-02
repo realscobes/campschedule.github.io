@@ -161,7 +161,7 @@
           if (found) return;
           day.films.forEach((f) => {
             if (found) return;
-            if (/intermission|PSA|presentation|trivia/i.test(f.title)) return;
+            if (!DETAILS[f.title]) return;
             const startMins  = parseMins(f.start);
             const isUpcoming =
               day.date > todayStr ||
@@ -374,8 +374,9 @@
         table.setAttribute('role', 'tabpanel');
         table.innerHTML = `
           <thead><tr><th>Title</th><th>Start</th><th>End</th><th>Location</th><th></th></tr></thead>
-          <tbody>${day.films.filter(f => !/intermission|PSA|presentation|trivia/i.test(f.title)).map(f => {
+          <tbody>${day.films.filter(f => DETAILS[f.title]).map(f => {
             const d = DETAILS[f.title] || {};
+            const isMovie = d.movie !== false;
             const posterHtml = d.poster
               ? `<img class="film-poster" src="images/${d.poster}" alt="${f.title} poster" loading="lazy">`
               : '';
@@ -387,21 +388,21 @@
               d.summary  ? `<p class="film-summary">${d.summary}</p>` : '',
             ].join('');
             return `
-            <tr class="film-row" tabindex="0" data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
+            <tr class="film-row${isMovie ? '' : ' non-movie'}" tabindex="0" data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
               <td>${d.title || f.title}</td>
               <td data-label="Start"><span class="time time-single">${fmt12(f.start)}</span><span class="time-range"><span class="time">${fmt12(f.start)}</span> – <span class="time">${fmt12(f.end)}</span></span></td>
               <td data-label="End"><span class="time">${fmt12(f.end)}</span></td>
-              <td data-label="Location"><span class="loc loc-${f.location.toLowerCase()}">${f.location}</span></td>
-              <td class="toggle-cell"><span class="toggle-chevron"></span></td>
+              <td data-label="Location" style="${isMovie ? '' : 'display:flex;flex-direction:column;align-items:flex-end;gap:0.25rem;'}">${isMovie ? '' : '<span class="loc loc-special">special</span>'}<span class="loc loc-${f.location.toLowerCase()}">${f.location}</span></td>
+              <td class="toggle-cell">${isMovie ? '<span class="toggle-chevron"></span>' : ''}</td>
             </tr>
-            <tr class="film-details-row">
+            ${isMovie ? `<tr class="film-details-row">
               <td colspan="5"><div class="film-details-collapse"><div class="film-details-inner">${posterHtml}<div class="film-details-text">${metaHtml}</div></div></div></td>
-            </tr>`;
+            </tr>` : ''}`;
           }).join('')}
           </tbody>`;
         table.addEventListener('click', e => {
           const row = e.target.closest('tr.film-row');
-          if (!row) return;
+          if (!row || row.classList.contains('non-movie')) return;
           const isOpen = row.classList.contains('expanded');
           document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));
           if (!isOpen) openAccordion(row);
@@ -409,7 +410,7 @@
         table.addEventListener('keydown', e => {
           if (e.key !== 'Enter' && e.key !== ' ') return;
           const row = e.target.closest('tr.film-row');
-          if (!row) return;
+          if (!row || row.classList.contains('non-movie')) return;
           e.preventDefault();
           const isOpen = row.classList.contains('expanded');
           document.querySelectorAll('tr.film-row.expanded').forEach(r => r.classList.remove('expanded'));

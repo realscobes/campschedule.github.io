@@ -193,6 +193,7 @@ td:last-child {
 .loc-indoor  { background: #fefacc; color: #5a4a00; border: 1px solid #f0d800; }
 .loc-outdoor { background: #d6f5d6; color: #1a4a1a; border: 1px solid #5cd65c; }
 .loc-pool    { background: #cce8ff; color: #1a4a6e; border: 1px solid #66b3ff; }
+.loc-special { background: #ffd6d6; color: #7a0000; border: 1px solid #ff6666; }
 
 /* Time badge */
 .time-range { display: none; }
@@ -327,6 +328,13 @@ tbody tr.now-playing .time {
     padding: 0;
   }
 
+  tbody tr.film-row.non-movie {
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+  }
+
+  tbody tr.film-row.non-movie td { padding: 0; }
+
   td:first-child { font-size: 1.35rem; }
   .loc { font-size: 0.9em; }
   .now-playing-badge,
@@ -440,6 +448,11 @@ body.has-bottom-bar {
 }
 
 /* ── Accordion ─────────────────────────────────────────── */
+
+@media (min-width: 481px) {
+  tbody tr.film-row.non-movie td { padding-top: 0.45rem; padding-bottom: 0.45rem; }
+}
+tbody tr.film-row.non-movie { cursor: default; }
 
 .film-row { cursor: pointer; }
 

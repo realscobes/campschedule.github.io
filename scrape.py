@@ -185,6 +185,25 @@ def fetch_from_omdb(imdb_id):
     }
 
 
+WHITELIST_RE = re.compile(r"^'(.+)'\s*=\s*'(.+)'")
+
+
+def load_whitelist(path="whitelist"):
+    """Parse whitelist file of 'filename' = 'display name' entries."""
+    entries = {}
+    if not os.path.exists(path):
+        return entries
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith('//'):
+                continue
+            m = WHITELIST_RE.match(line)
+            if m:
+                entries[m.group(1)] = m.group(2)
+    return entries
+
+
 def main():
     with open("schedule.json", encoding="utf-8") as f:
         schedule = json.load(f)
@@ -230,6 +249,10 @@ def main():
             print(f"  WARNING: no TMDB match found, skipping")
             failed.append((raw_title, imdb_id))
             continue
+
+    for filename, display_name in load_whitelist().items():
+        details[filename] = {"title": display_name, "movie": False}
+        print(f"Whitelist: {filename} → {display_name}")
 
     details = dict(sorted(details.items()))
 

@@ -119,14 +119,10 @@
       const yd           = new Date(now);
       yd.setDate(yd.getDate() - 1);
       const yesterdayStr = localDateStr(yd);
-      const tm           = new Date(now);
-      tm.setDate(tm.getDate() + 1);
-      const tomorrowStr  = localDateStr(tm);
       const nowMins      = now.getHours() * 60 + now.getMinutes();
 
       let anyPlaying = false;
       let playingRow = null;
-      let playingDay = null;
       let playingDayIdx = -1;
 
       SCHEDULE.forEach((day, i) => {
@@ -141,7 +137,7 @@
             // True cross-midnight film: starts before midnight, ends after
             playing = nowMins < endMins;
           }
-          if (playing) { anyPlaying = true; playingRow = row; playingDay = day; playingDayIdx = i; }
+          if (playing) { anyPlaying = true; playingRow = row; playingDayIdx = i; }
 
           row.classList.toggle('now-playing', playing);
 
@@ -344,7 +340,6 @@
         ? bottomBar.getBoundingClientRect().top - 16
         : window.innerHeight - 16;
       const collapse   = detailsRow.querySelector('.film-details-collapse');
-      const inner      = detailsRow.querySelector('.film-details-inner');
       // Force reflow so scrollHeight is accurate (needed on Safari)
       void collapse?.offsetHeight;
       // scrollHeight doesn't include the padding that is transitioning from 0→1rem,
@@ -415,7 +410,6 @@
       const container = document.getElementById('tables-container');
       tabsBar.innerHTML = '';
       container.innerHTML = '';
-      const todayStr  = localDateStr(new Date());
       let activeIdx   = findActiveTabIdx();
 
       SCHEDULE.forEach((day, i) => {

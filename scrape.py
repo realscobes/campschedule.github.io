@@ -106,12 +106,12 @@ def fetch_credits(tmdb_id):
     return api_get(f"https://api.themoviedb.org/3/movie/{tmdb_id}/credits")
 
 
-def download_poster(poster_path, imdb_id):
+def download_poster(poster_path, tmdb_id):
     """Download poster from TMDB CDN (not rate-limited by the API quota)."""
     if not poster_path:
         return None
     ext = os.path.splitext(poster_path)[1] or ".jpg"
-    filename = f"{imdb_id}{ext}"
+    filename = f"{tmdb_id}{ext}"
     filepath = os.path.join("images", filename)
     if os.path.exists(filepath):
         print(f"  poster already cached: {filename}")
@@ -127,72 +127,8 @@ def download_poster(poster_path, imdb_id):
             f.write(resp.content)
         print(f"  Downloaded poster: {filename}")
         return filename
-    print(f"  WARNING: could not download poster for {imdb_id}")
+    print(f"  WARNING: could not download poster for {tmdb_id}")
     return None
-
-
-def download_poster_url(url, imdb_id):
-    """Download a poster from a direct URL (used by OMDb fallback)."""
-    ext = os.path.splitext(url.split("?")[0])[1] or ".jpg"
-    filename = f"{imdb_id}{ext}"
-    filepath = os.path.join("images", filename)
-    if os.path.exists(filepath):
-        print(f"  poster already cached: {filename}")
-        return filename
-    for attempt in range(3):
-        resp = requests.get(url, timeout=15)
-        if resp.status_code == 429:
-            time.sleep(int(resp.headers.get("Retry-After", 2)))
-            continue
-        resp.raise_for_status()
-        with open(filepath, "wb") as f:
-            f.write(resp.content)
-        print(f"  Downloaded poster: {filename}")
-        return filename
-    print(f"  WARNING: could not download poster for {imdb_id}")
-    return None
-
-
-def fetch_from_omdb(imdb_id):
-    """Fallback: fetch movie data from OMDb API."""
-    try:
-        resp = requests.get(
-            "https://www.omdbapi.com/",
-            params={"i": imdb_id, "apikey": OMDB_API_KEY},
-            timeout=10,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-    except Exception as e:
-        print(f"  OMDb error: {e}")
-        return None
-
-    if data.get("Response") == "False":
-        print(f"  OMDb: {data.get('Error', 'no result')}")
-        return None
-
-    def clean(val):
-        return val if val and val != "N/A" else None
-
-    director = clean(data.get("Director"))
-    actors_raw = clean(data.get("Actors")) or ""
-    stars = [a.strip() for a in actors_raw.split(",") if a.strip()][:3]
-    tagline = clean(data.get("Tagline"))
-    summary = clean(data.get("Plot"))
-
-    poster_file = None
-    poster_url = clean(data.get("Poster"))
-    if poster_url:
-        poster_file = download_poster_url(poster_url, imdb_id)
-
-    print(f"  [OMDb] director={director}  stars={stars}")
-    return {
-        "director": director,
-        "stars": stars,
-        "tagline": tagline,
-        "summary": summary,
-        "poster": poster_file,
-    }
 
 
 WHITELIST_RE = re.compile(r"^'(.+)'\s*=\s*'(.+)'")

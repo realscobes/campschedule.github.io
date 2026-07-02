@@ -38,6 +38,30 @@
   <script>
     let SCHEDULE = [];
     let DETAILS   = {};
+    let FILM_DATES = {}; // `${dayIdx}|${start}|${title}` → effective calendar date
+
+    function buildFilmDates(schedule) {
+      FILM_DATES = {};
+      schedule.forEach((day, dayIdx) => {
+        let dateStr = day.date;
+        let prevMins = -1;
+        day.films.forEach(f => {
+          const mins = parseMins(f.start);
+          if (prevMins >= 0 && mins < prevMins - 60) {
+            // Time jumped backward >1 h → crossed midnight, advance effective date
+            const d = new Date(dateStr + 'T12:00:00');
+            d.setDate(d.getDate() + 1);
+            dateStr = localDateStr(d);
+          }
+          FILM_DATES[`${dayIdx}|${f.start}|${f.title}`] = dateStr;
+          prevMins = mins;
+        });
+      });
+    }
+
+    function filmDateOf(dayIdx, start, title) {
+      return FILM_DATES[`${dayIdx}|${start}|${title}`] || (SCHEDULE[dayIdx]?.date ?? '');
+    }
 
     function parseMins(hhmm) {
       const [h, m] = hhmm.split(':').map(Number);
@@ -103,19 +127,21 @@
       let anyPlaying = false;
       let playingRow = null;
       let playingDay = null;
+      let playingDayIdx = -1;
 
       SCHEDULE.forEach((day, i) => {
         document.querySelectorAll(`#day-${i} tbody tr.film-row`).forEach(row => {
           const startMins = parseMins(row.dataset.start);
           const endMins   = parseMins(row.dataset.end);
+          const fDate     = filmDateOf(i, row.dataset.start, row.dataset.title);
           let playing = false;
-          if (day.date === todayStr) {
+          if (fDate === todayStr) {
             playing = isNowPlaying(startMins, endMins, nowMins);
-          } else if (day.date === yesterdayStr && endMins < startMins) {
-            // Overnight film from yesterday still running into today's early hours
+          } else if (fDate === yesterdayStr && endMins < startMins) {
+            // True cross-midnight film: starts before midnight, ends after
             playing = nowMins < endMins;
           }
-          if (playing) { anyPlaying = true; playingRow = row; playingDay = day; }
+          if (playing) { anyPlaying = true; playingRow = row; playingDay = day; playingDayIdx = i; }
 
           row.classList.toggle('now-playing', playing);
 
@@ -138,13 +164,14 @@
       if (anyPlaying && playingRow) {
         const startMins = parseMins(playingRow.dataset.start);
         const endMins   = parseMins(playingRow.dataset.end);
+        const fDate     = filmDateOf(playingDayIdx, playingRow.dataset.start, playingRow.dataset.title);
         let endDateStr;
-        if (playingDay.date === yesterdayStr) {
-          endDateStr = todayStr;    // overnight film ends today
-        } else if (endMins < startMins) {
-          endDateStr = tomorrowStr; // today's film crosses midnight
+        if (endMins < startMins) {
+          const d = new Date(fDate + 'T12:00:00');
+          d.setDate(d.getDate() + 1);
+          endDateStr = localDateStr(d);
         } else {
-          endDateStr = playingDay.date;
+          endDateStr = fDate;
         }
         const bar = document.getElementById('bottom-bar');
         document.getElementById('bottom-bar-label').textContent = 'Now Playing';
@@ -163,9 +190,10 @@
             if (found) return;
             if (!DETAILS[f.title]) return;
             const startMins  = parseMins(f.start);
+            const fDate      = filmDateOf(i, f.start, f.title);
             const isUpcoming =
-              day.date > todayStr ||
-              (day.date === todayStr && startMins > nowMins);
+              fDate > todayStr ||
+              (fDate === todayStr && startMins > nowMins);
             if (isUpcoming) {
               found = true;
               const row = [...document.querySelectorAll(`#day-${i} tbody tr.film-row`)]
@@ -179,7 +207,7 @@
                 document.getElementById('bottom-bar-label').textContent = 'Up Next';
                 document.getElementById('bottom-bar-title').textContent = DETAILS[f.title]?.title || f.title;
                 bar.dataset.targetMins = parseMins(f.start);
-                bar.dataset.targetDate = day.date;
+                bar.dataset.targetDate = fDate;
                 bar.removeAttribute('hidden');
                 document.body.classList.add('has-bottom-bar');
                 updateCountdown();
@@ -350,14 +378,45 @@
       if (row) scrollToRow(row, 'center');
     }
 
+    function findActiveTabIdx() {
+      const now          = new Date();
+      const todayStr     = localDateStr(now);
+      const nowMins      = now.getHours() * 60 + now.getMinutes();
+      const yd           = new Date(now);
+      yd.setDate(yd.getDate() - 1);
+      const yesterdayStr = localDateStr(yd);
+      // 1. Day containing the currently playing film
+      for (let i = 0; i < SCHEDULE.length; i++) {
+        for (const f of SCHEDULE[i].films) {
+          if (!DETAILS[f.title]) continue;
+          const fDate     = filmDateOf(i, f.start, f.title);
+          const startMins = parseMins(f.start);
+          const endMins   = parseMins(f.end);
+          const playing =
+            (fDate === todayStr && isNowPlaying(startMins, endMins, nowMins)) ||
+            (fDate === yesterdayStr && endMins < startMins && nowMins < endMins);
+          if (playing) return i;
+        }
+      }
+      // 2. Day containing the next upcoming film
+      for (let i = 0; i < SCHEDULE.length; i++) {
+        for (const f of SCHEDULE[i].films) {
+          if (!DETAILS[f.title]) continue;
+          const fDate     = filmDateOf(i, f.start, f.title);
+          const startMins = parseMins(f.start);
+          if (fDate > todayStr || (fDate === todayStr && startMins > nowMins)) return i;
+        }
+      }
+      return 0;
+    }
+
     function buildTables() {
       const tabsBar   = document.getElementById('tabs-bar');
       const container = document.getElementById('tables-container');
       tabsBar.innerHTML = '';
       container.innerHTML = '';
       const todayStr  = localDateStr(new Date());
-      let activeIdx   = SCHEDULE.findIndex(d => d.date === todayStr);
-      if (activeIdx === -1) activeIdx = 0;
+      let activeIdx   = findActiveTabIdx();
 
       SCHEDULE.forEach((day, i) => {
         const btn = document.createElement('button');
@@ -430,6 +489,7 @@
     ]).then(([scheduleData, detailsData]) => {
       SCHEDULE = scheduleData;
       DETAILS  = detailsData;
+      buildFilmDates(SCHEDULE);
       buildTables();
       fitHeaderPadding();
       window.addEventListener('resize', fitHeaderPadding);
@@ -441,6 +501,7 @@
           .then(data => {
             if (JSON.stringify(data) !== JSON.stringify(SCHEDULE)) {
               SCHEDULE = data;
+              buildFilmDates(SCHEDULE);
               buildTables();
             }
             highlight();

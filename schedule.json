@@ -1,79 +1,962 @@
 [
   {
-    "date": "2026-06-05",
-    "label": "Fri 5",
+    "date": "2026-07-05",
+    "label": "Sun 05",
     "films": [
-      { "title": "The Shining",               "start": "18:00", "end": "20:24", "location": "Pool",    "imdbId": "tt0081505" },
-      { "title": "Halloween",                 "start": "20:34", "end": "22:05", "location": "Pool",    "imdbId": "tt0077651" },
-      { "title": "A Nightmare on Elm Street", "start": "22:15", "end": "23:47", "location": "Outside", "imdbId": "tt0087800" },
-      { "title": "The Exorcist",              "start": "23:57", "end": "01:59", "location": "Outside", "imdbId": "tt0070047" }
+      {
+        "title": "The Hitcher (1986)",
+        "start": "14:30",
+        "end": "16:07",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-01",
+        "start": "16:07",
+        "end": "16:11",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-16",
+        "start": "16:11",
+        "end": "16:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Hundreds of Beavers (2024)",
+        "start": "16:12",
+        "end": "18:00",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-02",
+        "start": "18:00",
+        "end": "18:05",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-07",
+        "start": "18:05",
+        "end": "18:06",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Menu (2022)",
+        "start": "18:06",
+        "end": "19:53",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-03",
+        "start": "19:53",
+        "end": "19:57",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Witch (2015)",
+        "start": "19:57",
+        "end": "21:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-01",
+        "start": "22:00",
+        "end": "22:03",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Special_presentation_film_camp_2026_kickoff",
+        "start": "22:03",
+        "end": "22:27",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-02",
+        "start": "22:27",
+        "end": "22:28",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Starship Troopers (1997)",
+        "start": "22:28",
+        "end": "00:38",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-03",
+        "start": "00:38",
+        "end": "00:40",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Pitch Black (2000)",
+        "start": "00:40",
+        "end": "02:31",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-04",
+        "start": "02:31",
+        "end": "02:33",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Blade (1998)",
+        "start": "02:33",
+        "end": "04:34",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-05",
+        "start": "04:34",
+        "end": "04:34",
+        "location": "outdoor",
+        "imdbId": 0
+      }
     ]
   },
   {
-    "date": "2026-06-06",
-    "label": "Sat 6",
+    "date": "2026-07-06",
+    "label": "Mon 06",
     "films": [
-      { "title": "Hereditary",      "start": "02:09", "end": "04:16", "location": "Inside",  "imdbId": "tt7784604" },
-      { "title": "Get Out",         "start": "04:26", "end": "06:10", "location": "Inside",  "imdbId": "tt5052448" },
-      { "title": "The Conjuring",   "start": "06:20", "end": "08:12", "location": "Inside",  "imdbId": "tt1457767" },
-      { "title": "The Ring",        "start": "08:22", "end": "10:17", "location": "Inside",  "imdbId": "tt0298130" },
-      { "title": "Suspiria",        "start": "10:27", "end": "12:06", "location": "Inside",  "imdbId": "tt0076786" },
-      { "title": "28 Days Later",   "start": "12:16", "end": "14:09", "location": "Inside",  "imdbId": "tt0289043" },
-      { "title": "The Witch",       "start": "14:19", "end": "15:51", "location": "Inside",  "imdbId": "tt4263482" },
-      { "title": "Alien",           "start": "16:01", "end": "17:58", "location": "Inside",  "imdbId": "tt0078748" },
-      { "title": "The Thing",       "start": "18:08", "end": "19:57", "location": "Pool",    "imdbId": "tt0084787" },
-      { "title": "Rosemary's Baby", "start": "20:07", "end": "22:24", "location": "Pool",    "imdbId": "tt0063522" },
-      { "title": "Psycho",          "start": "22:34", "end": "00:23", "location": "Outside", "imdbId": "tt0054215" }
+      {
+        "title": "Indoor intermission-04",
+        "start": "09:30",
+        "end": "09:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Prevenge (2016)",
+        "start": "09:30",
+        "end": "10:58",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-05",
+        "start": "10:58",
+        "end": "11:03",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-06",
+        "start": "11:03",
+        "end": "11:03",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Thoroughbreds (2017)",
+        "start": "11:03",
+        "end": "12:35",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-06",
+        "start": "12:35",
+        "end": "12:39",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-08",
+        "start": "12:39",
+        "end": "12:40",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Let's Scare Jessica To Death (1971)",
+        "start": "12:40",
+        "end": "14:08",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-07",
+        "start": "14:08",
+        "end": "14:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-12",
+        "start": "14:13",
+        "end": "14:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Teeth (2007)",
+        "start": "14:13",
+        "end": "15:47",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-08",
+        "start": "15:47",
+        "end": "15:52",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-01",
+        "start": "15:52",
+        "end": "15:52",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Raw (2016)_fr",
+        "start": "15:52",
+        "end": "17:31",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-09",
+        "start": "17:31",
+        "end": "17:35",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-02",
+        "start": "17:35",
+        "end": "17:36",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Heathers (1988)",
+        "start": "17:36",
+        "end": "19:19",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-10",
+        "start": "19:19",
+        "end": "19:23",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-03",
+        "start": "19:23",
+        "end": "19:24",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Jennifer's Body (2009)",
+        "start": "19:24",
+        "end": "21:11",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-11",
+        "start": "21:11",
+        "end": "21:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-06",
+        "start": "22:00",
+        "end": "22:03",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Parasite (2019)",
+        "start": "22:03",
+        "end": "00:15",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-07",
+        "start": "00:15",
+        "end": "00:17",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Escape From New York (1981)",
+        "start": "00:17",
+        "end": "01:56",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-08",
+        "start": "01:56",
+        "end": "01:58",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Dead Snow (2009)",
+        "start": "01:58",
+        "end": "03:26",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-09",
+        "start": "03:26",
+        "end": "03:26",
+        "location": "outdoor",
+        "imdbId": 0
+      }
     ]
   },
   {
-    "date": "2026-06-07",
-    "label": "Sun 7",
+    "date": "2026-07-07",
+    "label": "Tue 07",
     "films": [
-      { "title": "Jaws",                     "start": "00:33", "end": "02:37", "location": "Outside", "imdbId": "tt0073195" },
-      { "title": "The Silence of the Lambs", "start": "02:47", "end": "04:45", "location": "Inside",  "imdbId": "tt0102926" },
-      { "title": "Scream",                   "start": "04:55", "end": "06:46", "location": "Inside",  "imdbId": "tt0117571" },
-      { "title": "Carrie",                   "start": "06:56", "end": "08:34", "location": "Inside",  "imdbId": "tt0074285" },
-      { "title": "Poltergeist",              "start": "08:44", "end": "10:38", "location": "Inside",  "imdbId": "tt0084516" },
-      { "title": "Night of the Living Dead", "start": "10:48", "end": "12:24", "location": "Inside",  "imdbId": "tt0063350" },
-      { "title": "Dawn of the Dead",         "start": "12:34", "end": "14:41", "location": "Inside",  "imdbId": "tt0077402" },
-      { "title": "Hellraiser",               "start": "14:51", "end": "16:24", "location": "Inside",  "imdbId": "tt0093177" },
-      { "title": "The Omen",                 "start": "16:34", "end": "18:25", "location": "Inside",  "imdbId": "tt0075005" },
-      { "title": "Candyman",                 "start": "18:35", "end": "20:14", "location": "Pool",    "imdbId": "tt0103919" },
-      { "title": "Doctor Sleep",             "start": "20:24", "end": "22:54", "location": "Pool",    "imdbId": "tt5606664" },
-      { "title": "The Babadook",             "start": "23:04", "end": "00:37", "location": "Outside", "imdbId": "tt2321549" }
+      {
+        "title": "Indoor intermission-12",
+        "start": "09:30",
+        "end": "09:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "One Cut of the Dead (2017)",
+        "start": "09:30",
+        "end": "11:06",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-13",
+        "start": "11:06",
+        "end": "11:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-17",
+        "start": "11:10",
+        "end": "11:11",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Jacob's Ladder (1990)",
+        "start": "11:11",
+        "end": "13:05",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-14",
+        "start": "13:05",
+        "end": "13:09",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-18",
+        "start": "13:09",
+        "end": "13:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Dead Ringers (1988)",
+        "start": "13:10",
+        "end": "15:05",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-15",
+        "start": "15:05",
+        "end": "15:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-15",
+        "start": "15:10",
+        "end": "15:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Infinity Pool (2023)",
+        "start": "15:10",
+        "end": "17:08",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-16",
+        "start": "17:08",
+        "end": "17:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-20",
+        "start": "17:12",
+        "end": "17:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Hunger (1983)",
+        "start": "17:13",
+        "end": "18:49",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-17",
+        "start": "18:49",
+        "end": "18:50",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Trivia_45m",
+        "start": "18:50",
+        "end": "19:35",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The was-Soda Jerk vs The Avalanches",
+        "start": "19:35",
+        "end": "19:48",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-18",
+        "start": "19:48",
+        "end": "19:49",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Labyrinth (1986)",
+        "start": "19:49",
+        "end": "21:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-10",
+        "start": "22:00",
+        "end": "22:03",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Dark Crystal (1982)",
+        "start": "22:03",
+        "end": "23:36",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-11",
+        "start": "23:36",
+        "end": "23:38",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Donnie Darko (2001)",
+        "start": "23:38",
+        "end": "01:31",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-12",
+        "start": "01:31",
+        "end": "01:32",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Bubba Ho-Tep (2002)",
+        "start": "01:32",
+        "end": "03:04",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-13",
+        "start": "03:04",
+        "end": "03:05",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Vindicator (1986)",
+        "start": "03:05",
+        "end": "04:37",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-14",
+        "start": "04:37",
+        "end": "04:38",
+        "location": "outdoor",
+        "imdbId": 0
+      }
     ]
   },
   {
-    "date": "2026-06-08",
-    "label": "Mon 8",
+    "date": "2026-07-08",
+    "label": "Wed 08",
     "films": [
-      { "title": "Insidious",     "start": "00:47", "end": "02:30", "location": "Outside", "imdbId": "tt1591095" },
-      { "title": "Sinister",      "start": "02:40", "end": "04:30", "location": "Inside",  "imdbId": "tt1922777" },
-      { "title": "The Descent",   "start": "04:40", "end": "06:19", "location": "Inside",  "imdbId": "tt0435625" },
-      { "title": "Us",            "start": "06:29", "end": "08:25", "location": "Inside",  "imdbId": "tt6857112" },
-      { "title": "Annihilation",  "start": "08:35", "end": "10:30", "location": "Inside",  "imdbId": "tt2798920" },
-      { "title": "A Quiet Place", "start": "10:40", "end": "12:10", "location": "Inside",  "imdbId": "tt6644200" },
-      { "title": "Terrifier 2",   "start": "12:20", "end": "14:38", "location": "Inside",  "imdbId": "tt13831504" },
-      { "title": "Talk to Me",    "start": "14:48", "end": "16:23", "location": "Inside",  "imdbId": "tt10638522" },
-      { "title": "Barbarian",     "start": "16:33", "end": "18:15", "location": "Inside",  "imdbId": "tt15791034" },
-      { "title": "X",             "start": "18:25", "end": "20:10", "location": "Pool",    "imdbId": "tt13560574" },
-      { "title": "Pearl",         "start": "20:20", "end": "22:02", "location": "Pool",    "imdbId": "tt18925334" },
-      { "title": "Nope",          "start": "22:12", "end": "00:22", "location": "Outside", "imdbId": "tt10954984" }
+      {
+        "title": "Indoor intermission-19",
+        "start": "10:00",
+        "end": "10:00",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Four Lions (2010)",
+        "start": "10:00",
+        "end": "11:41",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-20",
+        "start": "11:41",
+        "end": "11:46",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-06",
+        "start": "11:46",
+        "end": "11:46",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Room (2003)",
+        "start": "11:46",
+        "end": "13:26",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-21",
+        "start": "13:26",
+        "end": "13:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-19",
+        "start": "13:30",
+        "end": "13:31",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Disaster Artist (2017)",
+        "start": "13:31",
+        "end": "15:14",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-22",
+        "start": "15:14",
+        "end": "15:19",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-22",
+        "start": "15:19",
+        "end": "15:19",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Lighthouse (2019)",
+        "start": "15:19",
+        "end": "17:08",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-23",
+        "start": "17:08",
+        "end": "17:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-24",
+        "start": "17:13",
+        "end": "17:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Angel Heart (1987)",
+        "start": "17:13",
+        "end": "19:07",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-24",
+        "start": "19:07",
+        "end": "19:11",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-20",
+        "start": "19:11",
+        "end": "19:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Se7en (1995)",
+        "start": "19:12",
+        "end": "21:19",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-15",
+        "start": "21:45",
+        "end": "21:46",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Compartments",
+        "start": "21:46",
+        "end": "21:55",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Akira (1988)_en",
+        "start": "21:55",
+        "end": "00:00",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-16",
+        "start": "00:00",
+        "end": "00:02",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Adventures Of Buckaroo Banzai Across The 8th Dimension (1984)",
+        "start": "00:02",
+        "end": "01:45",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-17",
+        "start": "01:45",
+        "end": "01:45",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Shaun of the Dead (2004)",
+        "start": "01:45",
+        "end": "03:25",
+        "location": "outdoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-18",
+        "start": "03:25",
+        "end": "03:25",
+        "location": "outdoor",
+        "imdbId": 0
+      }
     ]
   },
   {
-    "date": "2026-06-09",
-    "label": "Tue 9",
+    "date": "2026-07-09",
+    "label": "Thu 09",
     "films": [
-      { "title": "M3GAN",             "start": "00:32", "end": "02:14", "location": "Outside", "imdbId": "tt8760708" },
-      { "title": "Midsommar",         "start": "02:24", "end": "04:52", "location": "Inside",  "imdbId": "tt8772262" },
-      { "title": "It",                "start": "05:02", "end": "07:17", "location": "Inside",  "imdbId": "tt1396484" },
-      { "title": "Mandy",             "start": "07:27", "end": "09:28", "location": "Inside",  "imdbId": "tt6998518" },
-      { "title": "The Invisible Man", "start": "09:38", "end": "11:42", "location": "Inside",  "imdbId": "tt1462400" },
-      { "title": "Black Swan",        "start": "11:52", "end": "13:40", "location": "Inside",  "imdbId": "tt0947798" },
-      { "title": "Misery",            "start": "13:50", "end": "15:37", "location": "Inside",  "imdbId": "tt0100157" },
-      { "title": "30 Days of Night",  "start": "15:47", "end": "17:40", "location": "Inside",  "imdbId": "tt0389722" }
+      {
+        "title": "Indoor intermission-25",
+        "start": "09:30",
+        "end": "09:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Bring Her Back (2025)",
+        "start": "09:30",
+        "end": "11:14",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-26",
+        "start": "11:14",
+        "end": "11:18",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-01",
+        "start": "11:18",
+        "end": "11:19",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "X (2022)",
+        "start": "11:19",
+        "end": "13:05",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-27",
+        "start": "13:05",
+        "end": "13:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-02",
+        "start": "13:10",
+        "end": "13:10",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Pearl (2022)",
+        "start": "13:10",
+        "end": "14:52",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-28",
+        "start": "14:52",
+        "end": "14:57",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-03",
+        "start": "14:57",
+        "end": "14:57",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "MaXXXine (2024)",
+        "start": "14:57",
+        "end": "16:41",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-29",
+        "start": "16:41",
+        "end": "16:45",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-15",
+        "start": "16:45",
+        "end": "16:46",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "The Blair Witch Project [1999]",
+        "start": "16:46",
+        "end": "18:07",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-30",
+        "start": "18:07",
+        "end": "18:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-23",
+        "start": "18:12",
+        "end": "18:12",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Ju-On The Grudge (2002)_ja",
+        "start": "18:12",
+        "end": "19:44",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Trivia_45m",
+        "start": "19:44",
+        "end": "20:29",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-31",
+        "start": "20:29",
+        "end": "20:30",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-19",
+        "start": "22:00",
+        "end": "22:02",
+        "location": "pool",
+        "imdbId": 0
+      },
+      {
+        "title": "The Pool (2018)_THA",
+        "start": "22:02",
+        "end": "23:32",
+        "location": "pool",
+        "imdbId": 0
+      },
+      {
+        "title": "Outdoor intermission-20",
+        "start": "23:32",
+        "end": "23:35",
+        "location": "pool",
+        "imdbId": 0
+      },
+      {
+        "title": "Lifeforce (1985)",
+        "start": "23:35",
+        "end": "01:32",
+        "location": "pool",
+        "imdbId": 0
+      }
+    ]
+  },
+  {
+    "date": "2026-07-10",
+    "label": "Fri 10",
+    "films": [
+      {
+        "title": "Indoor intermission-32",
+        "start": "02:30",
+        "end": "02:34",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "My Name Is Bruce (2007)",
+        "start": "02:34",
+        "end": "03:58",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-33",
+        "start": "03:58",
+        "end": "04:03",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "PSA-08",
+        "start": "04:03",
+        "end": "04:03",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Evil Dead 2 (Mexico Cut)",
+        "start": "04:03",
+        "end": "05:40",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-34",
+        "start": "05:40",
+        "end": "05:45",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Black Samson (1974)",
+        "start": "05:45",
+        "end": "07:13",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-35",
+        "start": "07:13",
+        "end": "07:18",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Team America World Police (2004)",
+        "start": "07:18",
+        "end": "08:56",
+        "location": "indoor",
+        "imdbId": 0
+      },
+      {
+        "title": "Indoor intermission-36",
+        "start": "08:56",
+        "end": "08:56",
+        "location": "indoor",
+        "imdbId": 0
+      }
     ]
   }
 ]

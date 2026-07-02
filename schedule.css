@@ -190,8 +190,8 @@ td:last-child {
   font-size: 0.82em;
   font-weight: 700;
 }
-.loc-inside  { background: #fefacc; color: #5a4a00; border: 1px solid #f0d800; }
-.loc-outside { background: #d6f5d6; color: #1a4a1a; border: 1px solid #5cd65c; }
+.loc-indoor  { background: #fefacc; color: #5a4a00; border: 1px solid #f0d800; }
+.loc-outdoor { background: #d6f5d6; color: #1a4a1a; border: 1px solid #5cd65c; }
 .loc-pool    { background: #cce8ff; color: #1a4a6e; border: 1px solid #66b3ff; }
 
 /* Time badge */

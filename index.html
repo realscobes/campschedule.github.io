@@ -159,15 +159,17 @@
         let found = false;
         SCHEDULE.forEach((day, i) => {
           if (found) return;
-          day.films.forEach((f, j) => {
+          day.films.forEach((f) => {
             if (found) return;
+            if (/intermission|PSA|presentation|trivia/i.test(f.title)) return;
             const startMins  = parseMins(f.start);
             const isUpcoming =
               day.date > todayStr ||
               (day.date === todayStr && startMins > nowMins);
             if (isUpcoming) {
               found = true;
-              const row = document.querySelectorAll(`#day-${i} tbody tr.film-row`)[j];
+              const row = [...document.querySelectorAll(`#day-${i} tbody tr.film-row`)]
+                .find(r => r.dataset.title === f.title);
               if (row) {
                 const badge = document.createElement('span');
                 badge.className = 'up-next-badge';
@@ -175,7 +177,7 @@
                 row.cells[0].appendChild(badge);
                 const bar = document.getElementById('bottom-bar');
                 document.getElementById('bottom-bar-label').textContent = 'Up Next';
-                document.getElementById('bottom-bar-title').textContent = f.title;
+                document.getElementById('bottom-bar-title').textContent = DETAILS[f.title]?.title || f.title;
                 bar.dataset.targetMins = parseMins(f.start);
                 bar.dataset.targetDate = day.date;
                 bar.removeAttribute('hidden');
@@ -372,7 +374,7 @@
         table.setAttribute('role', 'tabpanel');
         table.innerHTML = `
           <thead><tr><th>Title</th><th>Start</th><th>End</th><th>Location</th><th></th></tr></thead>
-          <tbody>${day.films.map(f => {
+          <tbody>${day.films.filter(f => !/intermission|PSA|presentation|trivia/i.test(f.title)).map(f => {
             const d = DETAILS[f.title] || {};
             const posterHtml = d.poster
               ? `<img class="film-poster" src="images/${d.poster}" alt="${f.title} poster" loading="lazy">`
@@ -380,12 +382,13 @@
             const metaHtml = [
               d.director ? `<p class="film-meta"><span class="film-meta-label">Director</span> <span class="film-meta-value">${d.director}</span></p>` : '',
               d.stars?.length ? `<p class="film-meta"><span class="film-meta-label">Starring</span> <span class="film-meta-value">${d.stars.join(' \u00b7 ')}</span></p>` : '',
+              d.year ? `<p class="film-meta"><span class="film-meta-label">Year</span> <span class="film-meta-value">${d.year}</span></p>` : '',
               d.tagline  ? `<p class="film-tagline">&ldquo;${d.tagline}&rdquo;</p>` : '',
               d.summary  ? `<p class="film-summary">${d.summary}</p>` : '',
             ].join('');
             return `
             <tr class="film-row" tabindex="0" data-start="${f.start}" data-end="${f.end}" data-title="${f.title}">
-              <td>${f.title}</td>
+              <td>${d.title || f.title}</td>
               <td data-label="Start"><span class="time time-single">${fmt12(f.start)}</span><span class="time-range"><span class="time">${fmt12(f.start)}</span> – <span class="time">${fmt12(f.end)}</span></span></td>
               <td data-label="End"><span class="time">${fmt12(f.end)}</span></td>
               <td data-label="Location"><span class="loc loc-${f.location.toLowerCase()}">${f.location}</span></td>

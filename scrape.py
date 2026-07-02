@@ -1,5 +1,6 @@
 import json
 import os
+import re
 import time
 from collections import deque
 
@@ -17,6 +18,17 @@ API_HEADERS = {
 }
 
 RATE_LIMIT = 38  # stay under the 40 req/s cap
+TITLE_YEAR_RE = re.compile(r'^(.+?)\s*[\(\[](\d{4})[\)\]](?:_[a-zA-Z]+)?$')
+
+
+def parse_title_year(raw):
+    """Extract (title, year) from 'Title (Year)' format, or (None, None) if not a film entry."""
+    m = TITLE_YEAR_RE.match(raw)
+    if m:
+        return m.group(1).strip(), m.group(2)
+    return None, None
+
+
 _request_times = deque()
 
 
@@ -44,7 +56,7 @@ def api_get(url, params=None):
         return resp.json()
 
 
-def find_tmdb_id(imdb_id, title=None):
+def find_tmdb_id(imdb_id, title=None, year=None):
     data = api_get(
         f"https://api.themoviedb.org/3/find/{imdb_id}",
         params={"external_source": "imdb_id"},
@@ -54,11 +66,14 @@ def find_tmdb_id(imdb_id, title=None):
         return results[0]["id"]
     if not title:
         return None
-    # Secondary: search by title and pick the closest year match if available
-    print(f"  IMDb ID lookup missed — trying title search for '{title}'")
+    # Secondary: search by title (and year if available) for a more accurate match
+    print(f"  IMDb ID lookup missed — trying title search for '{title}' ({year})")
+    params = {"query": title, "include_adult": True}
+    if year:
+        params["year"] = year
     search = api_get(
         "https://api.themoviedb.org/3/search/movie",
-        params={"query": title, "include_adult": True},
+        params=params,
     )
     candidates = search.get("results", [])
     if not candidates:
@@ -181,11 +196,15 @@ def main():
     failed = []
 
     for film in films:
-        title = film["title"]
+        raw_title = film["title"]
+        clean_title, year = parse_title_year(raw_title)
+        if clean_title is None:
+            print(f"Skipping: {raw_title}")
+            continue
         imdb_id = film["imdbId"]
-        print(f"Processing: {title} ({imdb_id})")
+        print(f"Processing: {raw_title} ({imdb_id})")
 
-        tmdb_id = find_tmdb_id(imdb_id, title)
+        tmdb_id = find_tmdb_id(imdb_id, clean_title, year)
         if tmdb_id:
             movie = fetch_movie(tmdb_id)
             credits = fetch_credits(tmdb_id)
@@ -195,9 +214,11 @@ def main():
                 None,
             )
             stars = [p["name"] for p in credits.get("cast", [])[:3]]
-            poster_file = download_poster(movie.get("poster_path"), imdb_id)
+            poster_file = download_poster(movie.get("poster_path"), tmdb_id)
 
-            details[title] = {
+            details[raw_title] = {
+                "title": clean_title,
+                "year": year,
                 "director": director,
                 "stars": stars,
                 "tagline": movie.get("tagline") or None,
@@ -207,7 +228,7 @@ def main():
             print(f"  director={director}  stars={stars}")
         else:
             print(f"  WARNING: no TMDB match found, skipping")
-            failed.append((title, imdb_id))
+            failed.append((raw_title, imdb_id))
             continue
 
     details = dict(sorted(details.items()))

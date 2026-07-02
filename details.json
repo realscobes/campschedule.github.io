@@ -1,280 +1,319 @@
 {
-  "28 Days Later": {
-    "director": "Danny Boyle",
+  "Akira (1988)_en": {
+    "title": "Akira",
+    "year": "1988",
+    "director": "Katsuhiro Otomo",
     "stars": [
-      "Cillian Murphy",
-      "Naomie Harris",
-      "Brendan Gleeson"
+      "Mitsuo Iwata",
+      "Nozomu Sasaki",
+      "Mami Koyama"
     ],
-    "tagline": "The days are numbered.",
-    "summary": "Twenty-eight days after a killer virus was accidentally unleashed from a British research facility, a small group of London survivors are caught in a desperate struggle to protect themselves from the infected. Carried by animals and humans, the virus turns those it infects into homicidal maniacs -- and it's absolutely impossible to contain.",
-    "poster": "tt0289043.jpg"
+    "tagline": "Neo-Tokyo is about to E.X.P.L.O.D.E.",
+    "summary": "A secret military project endangers Neo-Tokyo when it turns a biker gang member into a rampaging psychic psychopath that only two teenagers and a group of psychics can stop.",
+    "poster": "149.jpg"
   },
-  "30 Days of Night": {
-    "director": "David Slade",
+  "Angel Heart (1987)": {
+    "title": "Angel Heart",
+    "year": "1987",
+    "director": "Alan Parker",
     "stars": [
-      "Josh Hartnett",
-      "Melissa George",
-      "Danny Huston"
+      "Mickey Rourke",
+      "Robert De Niro",
+      "Lisa Bonet"
     ],
-    "tagline": "They're Coming!",
-    "summary": "This is the story of an isolated Alaskan town that is plunged into darkness for a month each year when the sun sinks below the horizon. As the last rays of light fade, the town is attacked by a bloodthirsty gang of vampires bent on an uninterrupted orgy of destruction. Only the small town's husband-and-wife Sheriff team stand between the survivors and certain destruction.",
-    "poster": "tt0389722.jpg"
+    "tagline": "It will scare you to your very soul.",
+    "summary": "A down-and-out Brooklyn detective is hired to track down a singer on an odyssey that will take him through the desperate streets of Harlem, the smoke-filled jazz clubs of New Orleans, and the swamps of Louisiana and its seedy underworld of voodoo.",
+    "poster": "635.jpg"
   },
-  "A Nightmare on Elm Street": {
-    "director": "Wes Craven",
+  "Black Samson (1974)": {
+    "title": "Black Samson",
+    "year": "1974",
+    "director": "Charles Bail",
     "stars": [
-      "John Saxon",
-      "Ronee Blakley",
-      "Heather Langenkamp"
+      "Rockne Tarkington",
+      "William Smith",
+      "Connie Strickland"
     ],
-    "tagline": "If Nancy doesn't wake up screaming, she won't wake up at all.",
-    "summary": "Teenagers in a small town are dropping like flies, apparently in the grip of mass hysteria causing their suicides. A cop's daughter, Nancy Thompson, traces the cause to child molester Fred Krueger, who was burned alive by angry parents many years before. Krueger has now come back in the dreams of his killers' children, claiming their lives as his revenge. Nancy and her boyfriend, Glen, must devise a plan to lure the monster out of the realm of nightmares and into the real world...",
-    "poster": "tt0087800.jpg"
+    "tagline": "Every brother's friend. Every mother's enemy.",
+    "summary": "Noble nightclub owner Samson does his best to keep his neighborhood clean of crime and drugs. When vicious mobster Johnny Nappa tries to muscle in on Samson's territory, Samson takes a brave stand against Nappa and his flunkies.",
+    "poster": "83805.jpg"
   },
-  "A Quiet Place": {
-    "director": "John Krasinski",
+  "Blade (1998)": {
+    "title": "Blade",
+    "year": "1998",
+    "director": "Stephen Norrington",
     "stars": [
-      "Emily Blunt",
-      "John Krasinski",
-      "Millicent Simmonds"
+      "Wesley Snipes",
+      "Stephen Dorff",
+      "Kris Kristofferson"
     ],
-    "tagline": "If they hear you, they hunt you.",
-    "summary": "A family is forced to live in silence while hiding from creatures that hunt by sound.",
-    "poster": "tt6644200.jpg"
+    "tagline": "Against an army of Immortals, one warrior must draw first blood.",
+    "summary": "The Daywalker known as \"Blade\" - a half-vampire, half-mortal man - becomes the protector of humanity against an underground army of vampires.",
+    "poster": "36647.jpg"
   },
-  "Alien": {
-    "director": "Ridley Scott",
+  "Bring Her Back (2025)": {
+    "title": "Bring Her Back",
+    "year": "2025",
+    "director": "Michael Philippou",
     "stars": [
-      "Tom Skerritt",
-      "Sigourney Weaver",
-      "Veronica Cartwright"
+      "Billy Barratt",
+      "Sally Hawkins",
+      "Mischa Heywood"
     ],
-    "tagline": "In space no one can hear you scream.",
-    "summary": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed.",
-    "poster": "tt0078748.jpg"
+    "tagline": "Family requires sacrifices.",
+    "summary": "Following the death of their father, a brother and sister are sent to live with a foster mother, only to learn that she is hiding a terrifying secret.",
+    "poster": "1151031.jpg"
   },
-  "Annihilation": {
-    "director": "Alex Garland",
+  "Bubba Ho-Tep (2002)": {
+    "title": "Bubba Ho-Tep",
+    "year": "2002",
+    "director": "Don Coscarelli",
     "stars": [
-      "Natalie Portman",
-      "Jennifer Jason Leigh",
-      "Gina Rodriguez"
+      "Bruce Campbell",
+      "Ossie Davis",
+      "Ella Joyce"
     ],
-    "tagline": "Fear what's inside.",
-    "summary": "A biologist signs up for a dangerous, secret expedition into a mysterious zone where the laws of nature don't apply.",
-    "poster": "tt2798920.jpg"
+    "tagline": "The King vs. The King of the Dead.",
+    "summary": "The \"true\" story of what really became of Elvis Presley. We find Elvis as an elderly resident in an East Texas rest home, who switched identities with an Elvis impersonator years before his \"death,\" then missed his chance to switch back. He must team up with JFK and fight an ancient Egyptian mummy for the souls of their fellow residents.",
+    "poster": "9707.jpg"
   },
-  "Barbarian": {
-    "director": "Zach Cregger",
+  "Dead Ringers (1988)": {
+    "title": "Dead Ringers",
+    "year": "1988",
+    "director": "David Cronenberg",
     "stars": [
-      "Georgina Campbell",
-      "Justin Long",
-      "Bill Skarsgård"
+      "Jeremy Irons",
+      "Geneviève Bujold",
+      "Heidi von Palleske"
     ],
-    "tagline": "Some stay for a night. Some stay for a week. Some never leave.",
-    "summary": "In town for a job interview, a young woman arrives at her Airbnb late at night only to find that it has been mistakenly double-booked and a strange man is already staying there. Against her better judgement, she decides to stay the night anyway.",
-    "poster": "tt15791034.jpg"
+    "tagline": "Two bodies. Two minds. One soul.",
+    "summary": "Elliot, a successful gynecologist, works at the same practice as his identical twin, Beverly. Elliot is attracted to many of his patients and has affairs with them. When he inevitably loses interest, he will give the woman over to Beverly, the meeker of the two, without the woman knowing the difference. Beverly falls hard for one of the patients, Claire, but when she inadvertently deceives him, he slips into a state of madness.",
+    "poster": "9540.jpg"
   },
-  "Black Swan": {
-    "director": "Darren Aronofsky",
+  "Dead Snow (2009)": {
+    "title": "Dead Snow",
+    "year": "2009",
+    "director": "Tommy Wirkola",
     "stars": [
-      "Natalie Portman",
-      "Mila Kunis",
-      "Vincent Cassel"
+      "Vegar Hoel",
+      "Charlotte Frogner",
+      "Stig Frode Henriksen"
     ],
-    "tagline": "\"I just want to be perfect.\"",
-    "summary": "A committed dancer struggles to maintain her sanity after winning the lead role in a production of Tchaikovsky's \"Swan Lake.\"",
-    "poster": "tt0947798.jpg"
+    "tagline": "Eins, Zwei, Die!",
+    "summary": "Eight medical students on a ski trip to Norway discover that Hitler's horrors live on when they come face to face with a battalion of zombie Nazi soldiers intent on devouring anyone unfortunate enough to wander into the remote mountains where they were once sent to die.",
+    "poster": "14451.jpg"
   },
-  "Candyman": {
-    "director": "Bernard Rose",
+  "Donnie Darko (2001)": {
+    "title": "Donnie Darko",
+    "year": "2001",
+    "director": "Richard Kelly",
     "stars": [
-      "Virginia Madsen",
-      "Tony Todd",
-      "Xander Berkeley"
+      "Jake Gyllenhaal",
+      "Jena Malone",
+      "James Duval"
     ],
-    "tagline": "We dare you to say his name five times.",
-    "summary": "The Candyman, a murderous soul with a hook for a hand, is accidentally summoned to reality by a skeptic grad student researching the monster's myth.",
-    "poster": "tt0103919.jpg"
+    "tagline": "28 days, 6 hours, 42 minutes, 12 seconds... that is when the world will end.",
+    "summary": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+    "poster": "141.jpg"
   },
-  "Carrie": {
-    "director": "Brian De Palma",
-    "stars": [
-      "Sissy Spacek",
-      "Piper Laurie",
-      "Amy Irving"
-    ],
-    "tagline": "If you've got a taste for terror…Take Carrie to the prom.",
-    "summary": "Withdrawn and sensitive teenager Carrie White faces bullying from her classmates and abuse from her fanatically pious mother. When she begins to suspect that she has supernatural powers, things take a dark and violent turn.",
-    "poster": "tt0074285.jpg"
-  },
-  "Dawn of the Dead": {
-    "director": "George A. Romero",
-    "stars": [
-      "David Emge",
-      "Ken Foree",
-      "Scott H. Reiniger"
-    ],
-    "tagline": "When there’s no more room in HELL, the dead will walk the EARTH!",
-    "summary": "During an ever-growing epidemic of zombies that have risen from the dead, two Philadelphia SWAT team members, a traffic reporter, and his television-executive girlfriend seek refuge in a secluded shopping mall.",
-    "poster": "tt0077402.jpg"
-  },
-  "Doctor Sleep": {
-    "director": "Mike Flanagan",
-    "stars": [
-      "Ewan McGregor",
-      "Rebecca Ferguson",
-      "Kyliegh Curran"
-    ],
-    "tagline": "Return to the Overlook.",
-    "summary": "Still scarred by the trauma he endured as a child at the Overlook Hotel, Dan Torrance faces the ghosts of the past when he meets Abra, a courageous teen who desperately needs his help -- and who possesses a powerful extrasensory ability called the \"shine\".",
-    "poster": "tt5606664.jpg"
-  },
-  "Get Out": {
-    "director": "Jordan Peele",
-    "stars": [
-      "Daniel Kaluuya",
-      "Allison Williams",
-      "Catherine Keener"
-    ],
-    "tagline": "Just because you're invited, doesn't mean you're welcome.",
-    "summary": "Chris and his girlfriend Rose go upstate to visit her parents for the weekend. At first, Chris reads the family's overly accommodating behavior as nervous attempts to deal with their daughter's interracial relationship, but as the weekend progresses, a series of increasingly disturbing discoveries lead him to a truth that he never could have imagined.",
-    "poster": "tt5052448.jpg"
-  },
-  "Halloween": {
+  "Escape From New York (1981)": {
+    "title": "Escape From New York",
+    "year": "1981",
     "director": "John Carpenter",
     "stars": [
-      "Donald Pleasence",
-      "Jamie Lee Curtis",
-      "Nancy Kyes"
+      "Kurt Russell",
+      "Lee Van Cleef",
+      "Ernest Borgnine"
     ],
-    "tagline": "The night he came home!",
-    "summary": "Fifteen years after murdering his sister on Halloween Night 1963, Michael Myers escapes from a mental hospital and returns to the small town of Haddonfield, Illinois to kill again.",
-    "poster": "tt0077651.jpg"
+    "tagline": "1997. New York City is a walled, maximum security prison. Breaking out is impossible. Breaking in is insane.",
+    "summary": "In a world ravaged by crime, the entire island of Manhattan has been converted into a walled prison where brutal prisoners roam free. After the US president crash-lands inside, war hero Snake Plissken has 24 hours to bring him back.",
+    "poster": "1103.jpg"
   },
-  "Hellraiser": {
-    "director": "Clive Barker",
+  "Four Lions (2010)": {
+    "title": "Four Lions",
+    "year": "2010",
+    "director": "Chris Morris",
     "stars": [
-      "Andrew Robinson",
-      "Clare Higgins",
-      "Sean Chapman"
+      "Riz Ahmed",
+      "Nigel Lindsay",
+      "Kayvan Novak"
     ],
-    "tagline": "Demon to some. Angel to others.",
-    "summary": "A hedonistic man finds a mysterious puzzle box that summons a group of gruesome beings known as the Cenobites. These otherworldly entities open the doors to a dominion where pain and pleasure are indivisible.",
-    "poster": "tt0093177.jpg"
+    "tagline": "We are four Lions.",
+    "summary": "Four Lions tells the story of a group of British jihadists who push their abstract dreams of glory to the breaking point. As the wheels fly off, and their competing ideologies clash, what emerges is an emotionally engaging (and entirely plausible) farce.",
+    "poster": "37495.jpg"
   },
-  "Hereditary": {
-    "director": "Ari Aster",
+  "Heathers (1988)": {
+    "title": "Heathers",
+    "year": "1988",
+    "director": "Michael Lehmann",
     "stars": [
-      "Toni Collette",
-      "Alex Wolff",
-      "Gabriel Byrne"
+      "Winona Ryder",
+      "Christian Slater",
+      "Shannen Doherty"
     ],
-    "tagline": "Every family tree hides a secret.",
-    "summary": "Following the death of the Leigh family matriarch, Annie and her children uncover disturbing secrets about their heritage. Their daily lives are not only impacted, but they also become entangled in a chilling fate from which they cannot escape, driving them to the brink of madness.",
-    "poster": "tt7784604.jpg"
+    "tagline": "Best friends, social trends and occasional murder.",
+    "summary": "A girl who halfheartedly tries to be part of the \"in crowd\" of her school meets a rebel who teaches her a more devious way to play social politics: by killing the popular kids.",
+    "poster": "2640.jpg"
   },
-  "Insidious": {
-    "director": "James Wan",
+  "Hundreds of Beavers (2024)": {
+    "title": "Hundreds of Beavers",
+    "year": "2024",
+    "director": "Mike Cheslik",
     "stars": [
-      "Patrick Wilson",
-      "Rose Byrne",
-      "Lin Shaye"
+      "Ryland Brickson Cole Tews",
+      "Olivia Graves",
+      "Doug Mancheski"
     ],
-    "tagline": "It's not the house that's haunted.",
-    "summary": "A family discovers that dark spirits have invaded their home after their son inexplicably falls into an endless sleep. When they reach out to a professional for help, they learn things are a lot more personal than they thought.",
-    "poster": "tt1591095.jpg"
+    "tagline": "Possibly thousands.",
+    "summary": "In the 19th century, a drunken applejack salesman must go from zero to hero and become North America's greatest fur trapper by defeating hundreds of beavers.",
+    "poster": "1019939.jpg"
   },
-  "It": {
-    "director": "Andy Muschietti",
+  "Infinity Pool (2023)": {
+    "title": "Infinity Pool",
+    "year": "2023",
+    "director": "Brandon Cronenberg",
     "stars": [
-      "Jaeden Martell",
-      "Jeremy Ray Taylor",
-      "Sophia Lillis"
+      "Alexander Skarsgård",
+      "Mia Goth",
+      "Cleopatra Coleman"
     ],
-    "tagline": "You'll float too.",
-    "summary": "In a small town in Maine, seven children known as The Losers Club come face to face with life problems, bullies and a monster that takes the shape of a clown called Pennywise.",
-    "poster": "tt1396484.jpg"
+    "tagline": "Find out what kind of creature you really are.",
+    "summary": "While staying at an isolated island resort, James and Em are enjoying a perfect vacation of pristine beaches, exceptional staff, and soaking up the sun. But guided by the seductive and mysterious Gabi, they venture outside the resort grounds and find themselves in a culture filled with violence, hedonism, and untold horror. A tragic accident leaves them facing a zero tolerance policy for crime: either you'll be executed, or, if you’re rich enough to afford it, you can watch yourself die instead.",
+    "poster": "667216.jpg"
   },
-  "Jaws": {
-    "director": "Steven Spielberg",
+  "Jacob's Ladder (1990)": {
+    "title": "Jacob's Ladder",
+    "year": "1990",
+    "director": "Adrian Lyne",
     "stars": [
-      "Roy Scheider",
-      "Robert Shaw",
-      "Richard Dreyfuss"
+      "Tim Robbins",
+      "Elizabeth Peña",
+      "Danny Aiello"
     ],
-    "tagline": "The terrifying motion picture from the terrifying No. 1 best seller.",
-    "summary": "When the seaside community of Amity finds itself under attack by a dangerous great white shark, the town's chief of police, a young marine biologist, and a grizzled shark hunter embark on a desperate quest to kill the beast before it strikes again.",
-    "poster": "tt0073195.jpg"
+    "tagline": "The most frightening thing about Jacob Singer's nightmare is that he isn't dreaming.",
+    "summary": "After returning home from the Vietnam War, veteran Jacob Singer struggles to maintain his sanity. Plagued by hallucinations and flashbacks, Singer rapidly falls apart as the world and people around him morph and twist into disturbing images. His girlfriend, Jezzie, and ex-wife, Sarah, try to help, but to little avail. Even Singer's chiropractor friend, Louis, fails to reach him as he descends into madness.",
+    "poster": "2291.jpg"
   },
-  "M3GAN": {
-    "director": "Gerard Johnstone",
+  "Jennifer's Body (2009)": {
+    "title": "Jennifer's Body",
+    "year": "2009",
+    "director": "Karyn Kusama",
     "stars": [
-      "Allison Williams",
-      "Violet McGraw",
-      "Amie Donald"
+      "Megan Fox",
+      "Amanda Seyfried",
+      "Johnny Simmons"
     ],
-    "tagline": "She's more than a toy. She's family.",
-    "summary": "A brilliant toy company roboticist uses artificial intelligence to develop M3GAN, a life-like doll programmed to emotionally bond with her newly orphaned niece. But when the doll's programming works too well, she becomes overprotective of her new friend with terrifying results.",
-    "poster": "tt8760708.jpg"
+    "tagline": "She's evil... and not just high school evil.",
+    "summary": "Jennifer, a gorgeous, seductive cheerleader takes evil to a whole new level after she's possessed by a sinister demon. Now it's up to her best friend to stop Jennifer's reign of terror before it's too late.",
+    "poster": "19994.jpg"
   },
-  "Mandy": {
-    "director": "Panos Cosmatos",
+  "Ju-On The Grudge (2002)_ja": {
+    "title": "Ju-On The Grudge",
+    "year": "2002",
+    "director": "Takashi Shimizu",
     "stars": [
-      "Nicolas Cage",
-      "Andrea Riseborough",
-      "Linus Roache"
+      "Megumi Okina",
+      "Misa Uehara",
+      "Yoji Tanaka"
     ],
-    "tagline": "A BRUTAL JOURNEY TOWARDS THE WILDEST REVENGE.",
-    "summary": "The Shadow Mountains, 1983. Red and Mandy lead a loving and peaceful existence; but when their pine-scented haven is savagely destroyed, Red is catapulted into a phantasmagoric journey filled with bloody vengeance and laced with fire.",
-    "poster": "tt6998518.jpg"
+    "tagline": "When a grudge from the dead passes to the living, who is safe?",
+    "summary": "When a social worker is sent to check on a traumatized elderly woman whose family have moved in at the site of a notorious murder case, she unwittingly unleashes a cycle of terror that transmits via its victims.",
+    "poster": "11838.jpg"
   },
-  "Midsommar": {
-    "director": "Ari Aster",
+  "Labyrinth (1986)": {
+    "title": "Labyrinth",
+    "year": "1986",
+    "director": "Jim Henson",
     "stars": [
-      "Florence Pugh",
-      "Jack Reynor",
-      "William Jackson Harper"
+      "David Bowie",
+      "Jennifer Connelly",
+      "Toby Froud"
     ],
-    "tagline": "Let the festivities begin.",
-    "summary": "Several friends travel to Sweden to study as anthropologists a summer festival that is held every ninety years in the remote hometown of one of them. What begins as a dream vacation in a place where the sun never sets, gradually turns into a dark nightmare as the mysterious inhabitants invite them to participate in their disturbing festive activities.",
-    "poster": "tt8772262.jpg"
+    "tagline": "Where everything seems possible and nothing is what it seems.",
+    "summary": "Frustrated with babysitting on yet another weekend night, Sarah, a teenager with an active imagination, summons the Goblins to take her baby stepbrother away. When little Toby actually disappears, Sarah must follow him into a fantastical world to rescue him from the Goblin King. Guarding his castle is the labyrinth itself, a twisted maze of deception, populated with outrageous characters and unknown dangers.",
+    "poster": "13597.jpg"
   },
-  "Misery": {
-    "director": "Rob Reiner",
+  "Let's Scare Jessica To Death (1971)": {
+    "title": "Let's Scare Jessica To Death",
+    "year": "1971",
+    "director": "John D. Hancock",
     "stars": [
-      "Kathy Bates",
-      "James Caan",
-      "Richard Farnsworth"
+      "Zohra Lampert",
+      "Barton Heyman",
+      "Kevin O'Connor"
     ],
-    "tagline": "Paul Sheldon used to write for a living. Now, he’s writing to stay alive.",
-    "summary": "After an accident, acclaimed novelist Paul Sheldon is rescued by a nurse who claims to be his biggest fan.  Her obsession takes a dark turn when she holds him captive in her remote Colorado home and forces him to write back to life the popular literary character he killed off.",
-    "poster": "tt0100157.jpg"
+    "tagline": "Something is after Jessica. Something very cold, very wet...and very dead.",
+    "summary": "Newly released from a mental ward, Jessica hopes to return to life the way it was before her nervous breakdown. But when Jessica moves to a country house with her husband and a close friend, she finds a mysterious girl living in there. Jessica's terror and paranoia resurface as evil forces surround her.",
+    "poster": "16154.jpg"
   },
-  "Night of the Living Dead": {
-    "director": "George A. Romero",
+  "Lifeforce (1985)": {
+    "title": "Lifeforce",
+    "year": "1985",
+    "director": "Tobe Hooper",
     "stars": [
-      "Judith O'Dea",
-      "Duane Jones",
-      "Marilyn Eastman"
+      "Steve Railsback",
+      "Peter Firth",
+      "Frank Finlay"
     ],
-    "tagline": "If it doesn't scare you, you're already dead!",
-    "summary": "A ragtag group barricade themselves in an old Pennsylvania farmhouse to remain safe from a horde of flesh-eating ghouls ravaging the Northeast.",
-    "poster": "tt0063350.jpg"
+    "tagline": "In the blink of an eye, the terror begins.",
+    "summary": "A race of space vampires arrives in London and infects the populace, commencing an apocalyptic descent into chaos.",
+    "poster": "11954.jpg"
   },
-  "Nope": {
-    "director": "Jordan Peele",
+  "MaXXXine (2024)": {
+    "title": "MaXXXine",
+    "year": "2024",
+    "director": "Ti West",
     "stars": [
-      "Daniel Kaluuya",
-      "Keke Palmer",
-      "Brandon Perea"
+      "Mia Goth",
+      "Elizabeth Debicki",
+      "Moses Sumney"
     ],
-    "tagline": "What’s a bad miracle?",
-    "summary": "Residents in a lonely gulch of inland California bear witness to an uncanny, chilling discovery.",
-    "poster": "tt10954984.jpg"
+    "tagline": "Hollywood is a killer.",
+    "summary": "In 1980s Hollywood, adult film star and aspiring actress Maxine Minx finally gets her big break. But as a mysterious killer stalks the starlets of Hollywood, a trail of blood threatens to reveal her sinister past.",
+    "poster": "1023922.jpg"
   },
-  "Pearl": {
+  "My Name Is Bruce (2007)": {
+    "title": "My Name Is Bruce",
+    "year": "2007",
+    "director": "Bruce Campbell",
+    "stars": [
+      "Bruce Campbell",
+      "Taylor Sharpe",
+      "Grace Thorsen"
+    ],
+    "tagline": "Fearless! Unstoppable! Ready For His Close-Up!",
+    "summary": "B-movie Legend Bruce Campbell is mistaken for his character Ash from the Evil Dead trilogy and forced to fight a real monster in a small town in Oregon.",
+    "poster": "1961.jpg"
+  },
+  "One Cut of the Dead (2017)": {
+    "title": "One Cut of the Dead",
+    "year": "2017",
+    "director": "Shinichiro Ueda",
+    "stars": [
+      "Takayuki Hamatsu",
+      "Yuzuki Akiyama",
+      "Kazuaki Nagaya"
+    ],
+    "tagline": "Don't Stop Shooting!",
+    "summary": "Real zombies arrive and terrorize the crew of a zombie film being shot in an abandoned warehouse, said to be the site of military experiments on humans.",
+    "poster": "513434.jpg"
+  },
+  "Parasite (2019)": {
+    "title": "Parasite",
+    "year": "2019",
+    "director": "Bong Joon Ho",
+    "stars": [
+      "Song Kang-ho",
+      "Lee Sun-kyun",
+      "Cho Yeo-jeong"
+    ],
+    "tagline": "Act like you own the place.",
+    "summary": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "poster": "496243.jpg"
+  },
+  "Pearl (2022)": {
+    "title": "Pearl",
+    "year": "2022",
     "director": "Ti West",
     "stars": [
       "Mia Goth",
@@ -283,207 +322,258 @@
     ],
     "tagline": "An X-traordinary origin story.",
     "summary": "Trapped on her family’s isolated farm, Pearl must tend to her ailing father under the bitter and overbearing watch of her devout mother. Lusting for a glamorous life like she’s seen in the movies, Pearl’s ambitions, temptations, and repressions collide.",
-    "poster": "tt18925334.jpg"
+    "poster": "949423.jpg"
   },
-  "Poltergeist": {
-    "director": "Tobe Hooper",
+  "Pitch Black (2000)": {
+    "title": "Pitch Black",
+    "year": "2000",
+    "director": "David Twohy",
     "stars": [
-      "JoBeth Williams",
-      "Craig T. Nelson",
-      "Beatrice Straight"
+      "Vin Diesel",
+      "Radha Mitchell",
+      "Cole Hauser"
     ],
-    "tagline": "They're here.",
-    "summary": "The Freelings' suburban home becomes the center of paranormal activity that opens a portal to the 'other side'. With help, they must cross over to get their daughter back.",
-    "poster": "tt0084516.jpg"
+    "tagline": "Don't be afraid of the dark. Be afraid of what's in the dark",
+    "summary": "When their ship crash-lands on a remote planet, the marooned passengers soon learn that escaped convict Riddick isn't the only thing they have to fear. Deadly creatures lurk in the shadows, waiting to attack in the dark, and the planet is rapidly plunging into the utter blackness of a total eclipse. With the body count rising, the doomed survivors are forced to turn to Riddick with his eerie eyes to guide them through the darkness to safety. With time running out, there's only one rule: Stay in the light.",
+    "poster": "2787.jpg"
   },
-  "Psycho": {
-    "director": "Alfred Hitchcock",
+  "Prevenge (2016)": {
+    "title": "Prevenge",
+    "year": "2016",
+    "director": "Alice Lowe",
     "stars": [
-      "Anthony Perkins",
-      "Janet Leigh",
-      "Vera Miles"
+      "Alice Lowe",
+      "Jo Hartley",
+      "Kayvan Novak"
     ],
-    "tagline": "A new and altogether different screen excitement!",
-    "summary": "When larcenous real estate clerk Marion Crane goes on the lam with a wad of cash and hopes of starting a new life, she ends up at the notorious Bates Motel, where manager Norman Bates cares for his housebound mother.",
-    "poster": "tt0054215.jpg"
+    "tagline": "Killing for two.",
+    "summary": "A pregnant widow, believing herself to be guided by her unborn child, embarks on a homicidal rampage.",
+    "poster": "395982.jpg"
   },
-  "Rosemary's Baby": {
-    "director": "Roman Polanski",
+  "Raw (2016)_fr": {
+    "title": "Raw",
+    "year": "2016",
+    "director": "Julia Ducournau",
     "stars": [
-      "Mia Farrow",
-      "John Cassavetes",
-      "Ruth Gordon"
+      "Garance Marillier",
+      "Ella Rumpf",
+      "Rabah Nait Oufella"
     ],
-    "tagline": "Pray for Rosemary's Baby.",
-    "summary": "A young couple, Rosemary and Guy, moves into an infamous New York apartment building, known by frightening legends and mysterious events, with the purpose of starting a family.",
-    "poster": "tt0063522.jpg"
+    "tagline": "What are you hungry for?",
+    "summary": "Stringent vegetarian Justine encounters a decadent, merciless, and dangerously seductive world during her first week at veterinary school. Desperate to fit in, she strays from her principles and eats raw meat for the first time. She soon experiences terrible and unexpected consequences as her true self begins to emerge.",
+    "poster": "393519.jpg"
   },
-  "Scream": {
-    "director": "Wes Craven",
+  "Se7en (1995)": {
+    "title": "Se7en",
+    "year": "1995",
+    "director": "David Fincher",
     "stars": [
-      "David Arquette",
-      "Neve Campbell",
-      "Courteney Cox"
+      "Morgan Freeman",
+      "Brad Pitt",
+      "Gwyneth Paltrow"
     ],
-    "tagline": "Someone has taken their love of scary movies one step too far. Solving this mystery is going to be murder.",
-    "summary": "A year after the murder of her mother, a teenage girl is terrorized by a masked killer who targets her and her friends by using scary movies as part of a deadly game.",
-    "poster": "tt0117571.jpg"
+    "tagline": "Gluttony. Greed. Sloth. Envy. Wrath. Pride. Lust.",
+    "summary": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Somerset researches each sin in an effort to get inside the killer's mind, while his novice partner, Mills, scoffs at his efforts to unravel the case.",
+    "poster": "807.jpg"
   },
-  "Sinister": {
-    "director": "Scott Derrickson",
+  "Shaun of the Dead (2004)": {
+    "title": "Shaun of the Dead",
+    "year": "2004",
+    "director": "Edgar Wright",
     "stars": [
-      "Ethan Hawke",
-      "Juliet Rylance",
-      "Vincent D'Onofrio"
+      "Simon Pegg",
+      "Nick Frost",
+      "Kate Ashfield"
     ],
-    "tagline": "Once you see him, nothing can save you.",
-    "summary": "True-crime writer Ellison Oswalt is in a slump; he hasn't had a best seller in more than 10 years and is becoming increasingly desperate for a hit. So, when he discovers the existence of a snuff film showing the deaths of a family, he vows to solve the mystery. He moves his own family into the victims' home and gets to work. However, when old film footage and other clues hint at the presence of a supernatural force, Ellison learns that living in the house may be fatal.",
-    "poster": "tt1922777.jpg"
+    "tagline": "A romantic comedy. With zombies.",
+    "summary": "Shaun lives a supremely uneventful life, which revolves around his girlfriend, his mother, and, above all, his local pub. This gentle routine is threatened when the dead return to life and make strenuous attempts to snack on ordinary Londoners.",
+    "poster": "747.jpg"
   },
-  "Suspiria": {
-    "director": "Dario Argento",
+  "Starship Troopers (1997)": {
+    "title": "Starship Troopers",
+    "year": "1997",
+    "director": "Paul Verhoeven",
     "stars": [
-      "Jessica Harper",
-      "Stefania Casini",
-      "Flavio Bucci"
+      "Casper Van Dien",
+      "Dina Meyer",
+      "Denise Richards"
     ],
-    "tagline": "Do You Know Anything About Witches?",
-    "summary": "An American newcomer to a prestigious German ballet academy comes to realize that the school is a front for something sinister amid a series of grisly murders.",
-    "poster": "tt0076786.jpg"
+    "tagline": "A new kind of enemy. A new kind of war.",
+    "summary": "Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as \"the Bugs.\"",
+    "poster": "563.jpg"
   },
-  "Talk to Me": {
-    "director": "Danny Philippou",
+  "Team America World Police (2004)": {
+    "title": "Team America World Police",
+    "year": "2004",
+    "director": "Trey Parker",
     "stars": [
-      "Sophie Wilde",
-      "Alexandra Jensen",
-      "Joe Bird"
+      "Trey Parker",
+      "Matt Stone",
+      "Kristen Miller"
     ],
-    "tagline": "You call. They'll answer.",
-    "summary": "When a group of friends discover how to conjure spirits using an embalmed hand, they become hooked on the new thrill, until one of them goes too far and unleashes terrifying supernatural forces.",
-    "poster": "tt10638522.jpg"
+    "tagline": "Freedom hangs by a thread.",
+    "summary": "When North Korean ruler Kim Jong-il orchestrates a global terrorist plot, it's up to the heavily armed, highly specialized Team America unit to stop his dastardly scheme. The group, which has recruited troubled Broadway actor Gary Johnston, not only has to face off against Jong-il, but they must also contend with the Film Actors Guild, a cadre of Hollywood liberals at odds with Team America's 'policing the world' tactics.",
+    "poster": "3989.jpg"
   },
-  "Terrifier 2": {
-    "director": "Michael Robison",
+  "Teeth (2007)": {
+    "title": "Teeth",
+    "year": "2007",
+    "director": "Mitchell Lichtenstein",
     "stars": [
-      "Erin Krakow",
-      "Tyler Hynes",
-      "Giles Panton"
+      "Jess Weixler",
+      "John Hensley",
+      "Josh Pais"
     ],
-    "tagline": null,
-    "summary": "Elizabeth's engagement plans are thrown into disarray when her fiancée's free-spirited brother David returns home. David's unexpected influence prompts Elizabeth to question her life decisions.",
-    "poster": "tt13831504.jpg"
+    "tagline": "Every rose has its thorns.",
+    "summary": "Dawn is an active member of her high-school chastity club but, when she meets Tobey, nature takes its course, and the pair answer the call. They suddenly learn she is a living example of the vagina dentata myth, when the encounter takes a grisly turn.",
+    "poster": "13121.jpg"
   },
-  "The Babadook": {
-    "director": "Jennifer Kent",
+  "The Adventures Of Buckaroo Banzai Across The 8th Dimension (1984)": {
+    "title": "The Adventures Of Buckaroo Banzai Across The 8th Dimension",
+    "year": "1984",
+    "director": "W.D. Richter",
     "stars": [
-      "Essie Davis",
-      "Noah Wiseman",
-      "Hayley McElhinney"
+      "Peter Weller",
+      "John Lithgow",
+      "Ellen Barkin"
     ],
-    "tagline": "If it's in a word, or it's in a look, you can't get rid of...",
-    "summary": "A grieving single mother and her child fall into a deep well of paranoia when an eerie children's book manifests in their home.",
-    "poster": "tt2321549.jpg"
+    "tagline": "Beings from Another Dimension have invaded your world.",
+    "summary": "Adventurer/surgeon/rock musician Buckaroo Banzai and his band of men, the Hong Kong Cavaliers, take on evil alien invaders from the 8th dimension.",
+    "poster": "11379.jpg"
   },
-  "The Conjuring": {
-    "director": "James Wan",
+  "The Blair Witch Project [1999]": {
+    "title": "The Blair Witch Project",
+    "year": "1999",
+    "director": "Daniel Myrick",
     "stars": [
-      "Vera Farmiga",
-      "Patrick Wilson",
-      "Lili Taylor"
+      "Heather Donahue",
+      "Joshua Leonard",
+      "Michael C. Williams"
     ],
-    "tagline": "Based on the true case files of the Warrens.",
-    "summary": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse. Forced to confront a powerful entity, the Warrens find themselves caught in the most terrifying case of their lives.",
-    "poster": "tt1457767.jpg"
+    "tagline": "Everything you've heard is true.",
+    "summary": "In October of 1994 three student filmmakers disappeared in the woods near Burkittsville, Maryland, while shooting a documentary. A year later their footage was found.",
+    "poster": "2667.jpg"
   },
-  "The Descent": {
-    "director": "Neil Marshall",
+  "The Dark Crystal (1982)": {
+    "title": "The Dark Crystal",
+    "year": "1982",
+    "director": "Jim Henson",
     "stars": [
-      "Shauna Macdonald",
-      "Natalie Mendoza",
-      "Alex Reid"
+      "Jim Henson",
+      "Kathryn Mullen",
+      "Frank Oz"
     ],
-    "tagline": "Scream your last breath.",
-    "summary": "After a personal tragedy, Sarah joins her friends on a caving expedition in the Appalachian Mountains. But when a rockfall traps them deep underground, their adventure turns into a nightmare. As they search for a way out, the group discovers they are not alone—lurking in the darkness are savage, cave-dwelling creatures. With rising tension and dwindling trust, the women must fight to survive against both the predators and each other.",
-    "poster": "tt0435625.jpg"
+    "tagline": "Another world, another time... in the age of wonder.",
+    "summary": "On another planet in the distant past, a Gelfling embarks on a quest to find the missing shard of a magical crystal and restore order to his world, before the grotesque race of Skeksis find and use the crystal for evil.",
+    "poster": "11639.jpg"
   },
-  "The Exorcist": {
-    "director": "William Friedkin",
+  "The Disaster Artist (2017)": {
+    "title": "The Disaster Artist",
+    "year": "2017",
+    "director": "James Franco",
     "stars": [
-      "Ellen Burstyn",
-      "Linda Blair",
-      "Jason Miller"
+      "Dave Franco",
+      "James Franco",
+      "Seth Rogen"
     ],
-    "tagline": "Something almost beyond comprehension is happening to a girl on this street, in this house…And a man has been sent for as a last resort. This man is The Exorcist.",
-    "summary": "When a mysterious entity possesses a young girl, her mother seeks the help of two Catholic priests to save her life.",
-    "poster": "tt0070047.jpg"
+    "tagline": "Based on the true story of one movie so bad it became infamous.",
+    "summary": "An aspiring actor in Hollywood meets an enigmatic stranger by the name of Tommy Wiseau, the meeting leads the actor down a path nobody could have predicted; creating the worst movie ever made.",
+    "poster": "371638.jpg"
   },
-  "The Invisible Man": {
-    "director": "Leigh Whannell",
+  "The Hitcher (1986)": {
+    "title": "The Hitcher",
+    "year": "1986",
+    "director": "Robert Harmon",
     "stars": [
-      "Elisabeth Moss",
-      "Aldis Hodge",
-      "Storm Reid"
+      "Rutger Hauer",
+      "C. Thomas Howell",
+      "Jennifer Jason Leigh"
     ],
-    "tagline": "What you can't see can hurt you.",
-    "summary": "When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see.",
-    "poster": "tt1462400.jpg"
+    "tagline": "The terror starts the moment he stops.",
+    "summary": "On a stormy night, young Jim, who transports a luxury car from Chicago to California to deliver it to its owner, feeling tired and sleepy, picks up a mysterious hitchhiker, who has appeared out of nowhere, thinking that a good conversation will help him not to fall asleep. He will have enough time to deeply regret such an unmeditated decision.",
+    "poster": "9542.jpg"
   },
-  "The Omen": {
-    "director": "Richard Donner",
+  "The Hunger (1983)": {
+    "title": "The Hunger",
+    "year": "1983",
+    "director": "Tony Scott",
     "stars": [
-      "Gregory Peck",
-      "Lee Remick",
-      "David Warner"
+      "Catherine Deneuve",
+      "David Bowie",
+      "Susan Sarandon"
     ],
-    "tagline": "It is the greatest mystery of all because no human being will ever solve it.",
-    "summary": "Immediately after their miscarriage, the US diplomat Robert Thorn adopts the newborn Damien without the knowledge of his wife. Yet what he doesn’t know is that their new son is the son of the devil.",
-    "poster": "tt0075005.jpg"
+    "tagline": "Nothing human loves forever.",
+    "summary": "Five-thousand-year-old vampire Miriam promises her lovers the gift of eternal life. When John, her cellist companion for centuries, discovers that he has suddenly begun growing old, he attempts to seek out the help of Dr. Sarah Roberts, a researcher on the mechanisms of aging.",
+    "poster": "11654.jpg"
   },
-  "The Ring": {
-    "director": "Gore Verbinski",
+  "The Lighthouse (2019)": {
+    "title": "The Lighthouse",
+    "year": "2019",
+    "director": "Robert Eggers",
     "stars": [
-      "Naomi Watts",
-      "Martin Henderson",
-      "David Dorfman"
+      "Robert Pattinson",
+      "Willem Dafoe",
+      "Valeriia Karaman"
     ],
-    "tagline": "Before you die, you see",
-    "summary": "Journalist Rachel Keller investigates a strange videotape that may be behind the untimely deaths of four teenagers. There is an urban legend about this tape: the viewer will die seven days after watching it. Rachel tracks down the video... and watches it. Now she has just seven days to unravel the mystery of the Ring in order to save herself and her son.",
-    "poster": "tt0298130.jpg"
+    "tagline": "There is enchantment in the light.",
+    "summary": "Two lighthouse keepers try to maintain their sanity while living on a remote and mysterious New England island in the 1890s.",
+    "poster": "503919.jpg"
   },
-  "The Shining": {
-    "director": "Stanley Kubrick",
+  "The Menu (2022)": {
+    "title": "The Menu",
+    "year": "2022",
+    "director": "Mark Mylod",
     "stars": [
-      "Jack Nicholson",
-      "Shelley Duvall",
-      "Danny Lloyd"
+      "Anya Taylor-Joy",
+      "Ralph Fiennes",
+      "Nicholas Hoult"
     ],
-    "tagline": "A masterpiece of modern horror.",
-    "summary": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.",
-    "poster": "tt0081505.jpg"
+    "tagline": "Painstakingly prepared. Brilliantly executed.",
+    "summary": "A young couple travels to a remote island to eat at an exclusive restaurant where the chef has prepared a lavish menu, with some shocking surprises.",
+    "poster": "593643.jpg"
   },
-  "The Silence of the Lambs": {
-    "director": "Jonathan Demme",
+  "The Pool (2018)_THA": {
+    "title": "The Pool",
+    "year": "2018",
+    "director": "Phuping Pungsa-ard",
     "stars": [
-      "Jodie Foster",
-      "Anthony Hopkins",
-      "Scott Glenn"
+      "Theeradej Wongpuapan",
+      "Ratnomnot Ratchiratham",
+      "Kongkiat Khomsiri"
     ],
-    "tagline": "To enter the mind of a killer she must challenge the mind of a madman.",
-    "summary": "Clarice Starling is a top student at the FBI's training academy.  Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism.  Crawford believes that Lecter may have insight into a case and that Starling, as an attractive young woman, may be just the bait to draw him out.",
-    "poster": "tt0102926.jpg"
+    "tagline": "No water. No ladder. No way out.",
+    "summary": "Left alone to clean up a 6-meter-deep deserted pool, Day falls asleep on an inflatable raft. When he wakes, the water level has sunk so low that he can't climb out on his own. Stuck in the pool, Day screams for help, but the only thing that hears him is a creature from a nearby crocodile farm.",
+    "poster": "550201.jpg"
   },
-  "The Thing": {
-    "director": "John Carpenter",
+  "The Room (2003)": {
+    "title": "The Room",
+    "year": "2003",
+    "director": "Tommy Wiseau",
     "stars": [
-      "Kurt Russell",
-      "Wilford Brimley",
-      "T.K. Carter"
+      "Tommy Wiseau",
+      "Juliette Danielle",
+      "Greg Sestero"
     ],
-    "tagline": "Anytime. Anywhere. Anyone.",
-    "summary": "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
-    "poster": "tt0084787.jpg"
+    "tagline": "Can you ever really trust anyone?",
+    "summary": "Johnny is a successful banker with great respect for and dedication to the people in his life, especially his future wife Lisa. The happy-go-lucky guy sees his world being torn apart when his friends begin to betray him one-by-one.",
+    "poster": "17473.jpg"
   },
-  "The Witch": {
+  "The Vindicator (1986)": {
+    "title": "The Vindicator",
+    "year": "1986",
+    "director": "Jean-Claude Lord",
+    "stars": [
+      "David McIlwraith",
+      "Teri Austin",
+      "Richard Cox"
+    ],
+    "tagline": "They thought they took his life...now he wants theirs. Invincible. Unstoppable. Indestructible. He's out on the street and out of control!",
+    "summary": "An employee of a secret company operation becomes the victim of the company's special weapons project. He is transformed into a robotic killing machine that, because of his programming must destroy anything that comes near him.",
+    "poster": "3201.jpg"
+  },
+  "The Witch (2015)": {
+    "title": "The Witch",
+    "year": "2015",
     "director": "Robert Eggers",
     "stars": [
       "Anya Taylor-Joy",
@@ -492,20 +582,24 @@
     ],
     "tagline": "Evil takes many forms.",
     "summary": "In 1630, a farmer relocates his family to a remote plot of land on the edge of a forest where strange, unsettling things happen. With suspicion and paranoia mounting, each family member's faith, loyalty and love are tested in shocking ways.",
-    "poster": "tt4263482.jpg"
+    "poster": "310131.jpg"
   },
-  "Us": {
-    "director": "Jordan Peele",
+  "Thoroughbreds (2017)": {
+    "title": "Thoroughbreds",
+    "year": "2017",
+    "director": "Cory Finley",
     "stars": [
-      "Lupita Nyong'o",
-      "Winston Duke",
-      "Elisabeth Moss"
+      "Olivia Cooke",
+      "Anya Taylor-Joy",
+      "Anton Yelchin"
     ],
-    "tagline": "Watch yourself.",
-    "summary": "Husband and wife Gabe and Adelaide Wilson take their kids to their beach house expecting to unplug and unwind with friends. But as night descends, their serenity turns to tension and chaos when some shocking visitors arrive uninvited.",
-    "poster": "tt6857112.jpg"
+    "tagline": "Good breeding gone bad",
+    "summary": "Lily and Amanda, two high school students living in suburban Connecticut, rekindle their unlikely friendship after years of drifting apart. Together, they devise a plan to kill Lily's abusive stepfather by hiring a lowlife drug dealer.",
+    "poster": "397722.jpg"
   },
-  "X": {
+  "X (2022)": {
+    "title": "X",
+    "year": "2022",
     "director": "Ti West",
     "stars": [
       "Mia Goth",
@@ -514,6 +608,6 @@
     ],
     "tagline": "Dying to show you a good time.",
     "summary": "In 1979, a group of young filmmakers set out to make an adult film in rural Texas, but when their reclusive, elderly hosts catch them in the act, the cast find themselves fighting for their lives.",
-    "poster": "tt13560574.jpg"
+    "poster": "760104.jpg"
   }
 }

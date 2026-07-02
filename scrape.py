@@ -19,6 +19,12 @@ API_HEADERS = {
 
 RATE_LIMIT = 38  # stay under the 40 req/s cap
 TITLE_YEAR_RE = re.compile(r'^(.+?)\s*[\(\[](\d{4})[\)\]](?:_[a-zA-Z]+)?$')
+TITLE_NOYEAR_RE = re.compile(r'^(.+?)\s*[\(\[].*[\)\]](?:_[a-zA-Z]+)?$')
+
+# Override the title sent to TMDB search for entries that don't match well.
+SEARCH_TITLE_OVERRIDES = {
+    "Evil Dead 2 (Mexico Cut)": "Evil Dead II",
+}
 
 
 def parse_title_year(raw):
@@ -26,6 +32,10 @@ def parse_title_year(raw):
     m = TITLE_YEAR_RE.match(raw)
     if m:
         return m.group(1).strip(), m.group(2)
+    # Fallback: strip any trailing parenthetical (e.g. 'Evil Dead 2 (Mexico Cut)')
+    m = TITLE_NOYEAR_RE.match(raw)
+    if m:
+        return m.group(1).strip(), None
     return None, None
 
 
@@ -220,10 +230,11 @@ def main():
         if clean_title is None:
             print(f"Skipping: {raw_title}")
             continue
+        search_title = SEARCH_TITLE_OVERRIDES.get(raw_title, clean_title)
         imdb_id = film["imdbId"]
         print(f"Processing: {raw_title} ({imdb_id})")
 
-        tmdb_id = find_tmdb_id(imdb_id, clean_title, year)
+        tmdb_id = find_tmdb_id(imdb_id, search_title, year)
         if tmdb_id:
             movie = fetch_movie(tmdb_id)
             credits = fetch_credits(tmdb_id)

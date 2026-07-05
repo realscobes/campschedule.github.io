@@ -276,6 +276,7 @@
       const results = [];
       SCHEDULE.forEach((day, dayIdx) => {
         day.films.forEach(film => {
+          if (!DETAILS[film.title]) return;
           if (film.title.toLowerCase().includes(q)) results.push({ day, dayIdx, film });
         });
       });
@@ -315,7 +316,7 @@
         return `<div class="search-result" data-day-idx="${dayIdx}" data-title="${film.title.replace(/"/g,'&quot;')}">
           ${posterHtml}
           <div class="search-result-info">
-            <div class="search-result-title">${film.title}</div>
+            <div class="search-result-title">${DETAILS[film.title]?.title || film.title}</div>
             <div class="search-result-meta">${day.label} · ${fmt12(film.start)} · <span class="search-countdown" data-start-date="${day.date}" data-start-time="${film.start}" data-end-date="${endDate}" data-end-time="${film.end}">${cdText}</span></div>
           </div>
         </div>`;
